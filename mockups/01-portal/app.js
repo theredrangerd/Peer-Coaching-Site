@@ -63,32 +63,41 @@
   if (ttSelect && ttBody) {
     var rows = Array.prototype.slice.call(ttBody.querySelectorAll("tr"));
 
-    var applyFilter = function () {
+    var applyFilter = function (animate) {
       var value = ttSelect.value;
       var all = value === "all";
       var shown = 0;
+      var visible = [];
 
       rows.forEach(function (row) {
         var subject = row.getAttribute("data-subject");
         var isOff = subject === "none";
         var match = all ? true : subject === value;
         row.hidden = !match;
+        row.classList.remove("is-in");
+        if (match) visible.push(row);
         if (match && !isOff) shown++;
       });
+
+      if (animate) {
+        // restart the stagger animation on the rows now showing
+        void ttBody.offsetWidth; // force reflow so the class re-triggers
+        visible.forEach(function (row, i) {
+          row.style.setProperty("--i", Math.min(i, 8));
+          row.classList.add("is-in");
+        });
+      }
 
       if (ttEmpty) ttEmpty.hidden = all || shown > 0;
 
       if (ttCount) {
-        if (all) {
-          ttCount.textContent = "";
-        } else {
-          ttCount.textContent =
-            shown + (shown === 1 ? " session" : " sessions") + " a week for " + value;
-        }
+        ttCount.textContent = all
+          ? ""
+          : shown + (shown === 1 ? " session" : " sessions") + " a week for " + value;
       }
     };
 
-    ttSelect.addEventListener("change", applyFilter);
-    applyFilter();
+    ttSelect.addEventListener("change", function () { applyFilter(true); });
+    applyFilter(false);
   }
 })();
