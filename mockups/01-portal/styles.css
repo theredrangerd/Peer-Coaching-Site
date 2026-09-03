@@ -255,7 +255,22 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
   min-height: 44px; cursor: pointer;
 }
 .tt-filter select:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
-.tt-count { font-size: var(--step--1); color: var(--text-muted); }
+.tt-count { font-size: var(--step--1); color: var(--text-muted); transition: opacity .2s ease; }
+.select-wrap::after { transition: transform .2s ease; }
+.select-wrap:focus-within::after { transform: rotate(225deg); }
+
+/* filtered rows animate in */
+@keyframes tt-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.tt tbody tr.is-in {
+  animation: tt-fade-in .28s ease both;
+  animation-delay: calc(var(--i, 0) * 22ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .tt tbody tr.is-in { animation: none; }
+}
 .tt-empty {
   margin-top: var(--space-3); padding: var(--space-4) var(--space-5);
   background: var(--surface-2); border: 1px solid var(--border);
