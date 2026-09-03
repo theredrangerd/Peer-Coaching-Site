@@ -120,16 +120,16 @@ free slot students can book that day. Sample pattern:
 
 Placeholder coaches. Avatars are coloured monogram tiles, not photos.
 
-| Name | Year | Subjects | Bio | Interests | Specialty |
+| Name | Grade | Subjects | Bio | Interests | Specialty |
 | --- | --- | --- | --- | --- | --- |
-| Aisha R. | Y13 | Maths, Physics | "I went from a 5 to a 7 in HL Maths by changing how I revised, not how long." | Robotics, football, film photography | Exam technique |
-| Daniel K. | Y13 | Chemistry, Biology | "Sciences click when you stop memorising and start asking why." | Climbing, cooking, chess | Building intuition |
-| Mei-Lin T. | Y12 | Economics, Maths | "Past papers are the whole game. I'll show you how to use them properly." | Debate, piano, running | Past-paper drills |
-| Sofia G. | Y13 | English Lit, History | "Essay structure is a skill you can learn in a week, not a talent." | Theatre, journalism, hiking | Essay planning |
-| Arjun P. | Y12 | Computer Science, Maths | "We'll get you writing code you actually understand, line by line." | Game dev, basketball, electronic music | Coding fundamentals |
-| Noah B. | Y13 | Physics, Maths | "I like the hard questions — the ones worth the most marks." | Sailing, astronomy, guitar | Problem solving |
-| Hannah W. | Y12 | Biology, Chemistry | "Diagrams and flashcards that actually stick. I'll help you make them." | Netball, baking, volunteering | Revision systems |
-| Yusuf A. | Y13 | Geography, Economics | "Case studies are your evidence bank. Let's build yours." | Photography, cycling, cooking | Case studies |
+| Aisha R. | Grade 12 | Maths, Physics | "I went from a 5 to a 7 in HL Maths by changing how I revised, not how long." | Robotics, football, film photography | Exam technique |
+| Daniel K. | Grade 12 | Chemistry, Biology | "Sciences click when you stop memorising and start asking why." | Climbing, cooking, chess | Building intuition |
+| Mei-Lin T. | Grade 11 | Economics, Maths | "Past papers are the whole game. I'll show you how to use them properly." | Debate, piano, running | Past-paper drills |
+| Sofia G. | Grade 12 | English Lit, History | "Essay structure is a skill you can learn in a week, not a talent." | Theatre, journalism, hiking | Essay planning |
+| Arjun P. | Grade 11 | Computer Science, Maths | "We'll get you writing code you actually understand, line by line." | Game dev, basketball, electronic music | Coding fundamentals |
+| Noah B. | Grade 12 | Physics, Maths | "I like the hard questions — the ones worth the most marks." | Sailing, astronomy, guitar | Problem solving |
+| Hannah W. | Grade 11 | Biology, Chemistry | "Diagrams and flashcards that actually stick. I'll help you make them." | Netball, baking, volunteering | Revision systems |
+| Yusuf A. | Grade 12 | Geography, Economics | "Case studies are your evidence bank. Let's build yours." | Photography, cycling, cooking | Case studies |
 
 ---
 
@@ -139,7 +139,7 @@ Placeholder coaches. Avatars are coloured monogram tiles, not photos.
    resumes Monday 24 March. Coaches are still reachable by email for quick
    questions.
 2. New Economics coaching slots added on Fridays from this week.
-3. Y13 coaches: please confirm your Term 2 availability by Friday.
+3. Grade 12 coaches: please confirm your Term 2 availability by Friday.
 4. Past Paper Hub updated with the 2024 November session papers.
 
 *(Notice 1 uses the urgent style: `--danger` on `--danger-bg` plus an
