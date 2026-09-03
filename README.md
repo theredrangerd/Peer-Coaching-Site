@@ -16,9 +16,12 @@ Live review site (GitHub Pages, auto-deploys from `main`):
 | Mockup | Status |
 | --- | --- |
 | Landing / chooser (`mockups/index.html`) | built |
-| 01 Portal | not started |
-| 02 Editorial | not started |
-| 03 Library | not started |
+| 01 Portal — one-page dashboard | built, awaiting review |
+| 02 Editorial — marketing microsite | built, awaiting review |
+| 03 Library — browsable knowledge base | built, awaiting review |
+
+All three drew their copy from `mockups/content.md` (placeholder). Next: visual
+review, then a polish pass, then share the link with Ellie.
 
 ## Docs
 
