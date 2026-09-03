@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peer Coaching Hub — three directions</title>
+<meta name="description" content="Design review: the Peer Coaching Hub website shown three different ways. Same content and colours, three different structures.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/tokens.css">
+<link rel="stylesheet" href="shared/reset.css">
+<link rel="stylesheet" href="shared/a11y.css">
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1.0625rem;
+    background:
+      radial-gradient(60rem 30rem at 100% -10%, rgba(10,209,200,.10), transparent 60%),
+      radial-gradient(50rem 28rem at -10% 10%, rgba(69,223,177,.10), transparent 55%),
+      var(--bg);
+  }
+  .wrap { width: 100%; max-width: var(--measure-wide); margin-inline: auto; padding-inline: var(--space-4); }
+  @media (min-width: 768px) { .wrap { padding-inline: var(--space-6); } }
+
+  header.site {
+    padding-block: var(--space-5);
+    border-bottom: 1px solid var(--border);
+  }
+  .wordmark {
+    display: inline-flex; align-items: center; gap: var(--space-2);
+    font-weight: 700; color: var(--text); text-decoration: none;
+    font-size: var(--step-1);
+  }
+  .wordmark .dot {
+    width: 14px; height: 14px; border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--uwc-cyan), var(--uwc-mint));
+  }
+
+  main { flex: 1; padding-block: var(--space-8) var(--space-9); }
+
+  .lede { max-width: 46rem; }
+  .kicker {
+    text-transform: uppercase; letter-spacing: .08em; font-size: var(--step--1);
+    font-weight: 600; color: var(--primary); margin-bottom: var(--space-3);
+  }
+  h1 { font-size: var(--step-4); margin-bottom: var(--space-4); }
+  @media (min-width: 768px) { h1 { font-size: var(--step-5); } }
+  .lede p { color: var(--text-muted); font-size: var(--step-1); }
+
+  .ask {
+    margin-top: var(--space-6);
+    padding: var(--space-4) var(--space-5);
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius);
+    max-width: 46rem;
+  }
+  .ask strong { color: var(--text); }
+
+  .cards {
+    margin-top: var(--space-8);
+    display: grid; gap: var(--space-5);
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) { .cards { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
+
+  .card {
+    display: flex; flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+  }
+  .card .num {
+    font-size: var(--step--1); font-weight: 600; color: var(--text-muted);
+    letter-spacing: .06em;
+  }
+  .card h2 { font-size: var(--step-2); margin: var(--space-2) 0 var(--space-3); }
+  .card .best {
+    font-size: var(--step--1); font-weight: 600; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--primary); margin-bottom: var(--space-2);
+  }
+  .card p { color: var(--text-muted); flex: 1; }
+  .card .cta {
+    margin-top: var(--space-5);
+    display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    background: var(--primary); color: var(--text-on-fill);
+    text-decoration: none; font-weight: 600;
+    border-radius: var(--radius);
+    transition: background .15s ease;
+  }
+  .card .cta:hover { background: var(--primary-hover); color: var(--text-on-fill); }
+  .card .swatch { height: 6px; border-radius: var(--radius-full); margin-bottom: var(--space-5); }
+  .s-portal    { background: linear-gradient(90deg, var(--uwc-teal-deep), var(--uwc-cyan)); }
+  .s-editorial { background: linear-gradient(90deg, var(--uwc-teal), var(--uwc-mint)); }
+  .s-library   { background: linear-gradient(90deg, var(--uwc-teal-deep), var(--uwc-pale)); }
+
+  .compare { margin-top: var(--space-9); max-width: var(--measure-wide); }
+  .compare h2 { font-size: var(--step-2); margin-bottom: var(--space-4); }
+  .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+  table.cmp { min-width: 640px; font-size: var(--step-0); }
+  table.cmp th, table.cmp td {
+    text-align: left; padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--border);
+  }
+  table.cmp thead th { background: var(--bg-subtle); color: var(--text); font-weight: 600; }
+  table.cmp tbody th { font-weight: 500; color: var(--text-muted); }
+  table.cmp tr:last-child td, table.cmp tr:last-child th { border-bottom: 0; }
+
+  footer.site {
+    border-top: 1px solid var(--border);
+    padding-block: var(--space-6);
+    color: var(--text-muted);
+    font-size: var(--step--1);
+  }
+  footer.site p { max-width: var(--measure); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="wordmark" href="./"><span class="dot" aria-hidden="true"></span>Peer Coaching Hub</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <div class="lede">
+      <p class="kicker">Design review · Phase 0</p>
+      <h1>One website, three directions</h1>
+      <p>
+        This is the Peer Coaching Hub shown three different ways. The colours, the
+        content and the programme are the same in all three — what changes is how
+        the site is <strong>structured</strong> and how it <strong>feels</strong>
+        to move around. Open each one, click through it, then use
+        &ldquo;Back to overview&rdquo; to return here.
+      </p>
+    </div>
+
+    <div class="ask">
+      <strong>What we&rsquo;re asking:</strong> which structure fits the programme
+      best? Not which page looks most finished — these are quick mockups with
+      placeholder text and invented people. No real student data.
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="swatch s-portal" aria-hidden="true"></div>
+        <span class="num">01</span>
+        <h2>Portal</h2>
+        <p class="best">Best for coordination</p>
+        <p>
+          Everything on one screen — notices, timetable, who&rsquo;s free this
+          week, sign-up links. Built for students who check the site often and
+          want answers fast.
+        </p>
+        <a class="cta" href="01-portal/index.html">Open Portal <span aria-hidden="true">&rarr;</span></a>
+      </article>
+
+      <article class="card">
+        <div class="swatch s-editorial" aria-hidden="true"></div>
+        <span class="num">02</span>
+        <h2>Editorial</h2>
+        <p class="best">Best for explaining the programme</p>
+        <p>
+          Leads with the story — free, student-to-student, access for everyone.
+          A few clean pages that build trust with new students, staff and
+          parents, then link to the practical stuff.
+        </p>
+        <a class="cta" href="02-editorial/index.html">Open Editorial <span aria-hidden="true">&rarr;</span></a>
+      </article>
+
+      <article class="card">
+        <div class="swatch s-library" aria-hidden="true"></div>
+        <span class="num">03</span>
+        <h2>Library</h2>
+        <p class="best">Best for growing resources</p>
+        <p>
+          A browsable reference with a permanent sidebar. The revision resources —
+          past papers, channel picks, learning with AI — get room to grow, with a
+          long searchable FAQ.
+        </p>
+        <a class="cta" href="03-library/index.html">Open Library <span aria-hidden="true">&rarr;</span></a>
+      </article>
+    </div>
+
+    <section class="compare">
+      <h2>How they compare</h2>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead>
+            <tr>
+              <th scope="col">&nbsp;</th>
+              <th scope="col">Portal</th>
+              <th scope="col">Editorial</th>
+              <th scope="col">Library</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Main job it does best</th><td>Coordination</td><td>Marketing &amp; sign-ups</td><td>Resources &amp; reference</td></tr>
+            <tr><th scope="row">First-time visitor clarity</th><td>Medium</td><td>High</td><td>Medium</td></tr>
+            <tr><th scope="row">Speed for returning students</th><td>High</td><td>Low–Medium</td><td>Medium</td></tr>
+            <tr><th scope="row">Programme story &amp; mission</th><td>Low</td><td>High</td><td>Low–Medium</td></tr>
+            <tr><th scope="row">Pages to keep updated</th><td>Fewest</td><td>Most</td><td>Medium</td></tr>
+            <tr><th scope="row">Mobile complexity</th><td>Low</td><td>Low</td><td>Medium (sidebar)</td></tr>
+            <tr><th scope="row">Credibility with staff &amp; parents</th><td>Medium</td><td>High</td><td>Medium</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>
+      Built for the Peer Coaching coordinators, for design review by Ellie Alchin
+      (Head of Learning). Placeholder content throughout — invented tutors, sample
+      timetable, no real student names, photos or contact details. UWCSEA palette;
+      working title &ldquo;Peer Coaching Hub&rdquo; pending an official name and logo.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

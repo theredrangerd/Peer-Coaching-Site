@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Peer Coaching Hub — shared design tokens
+   Source of truth: docs/design-system.md
+   This file is IDENTICAL across all three mockups. Do not fork it.
+   Each mockup's own styles.css imports this and never redefines a primitive.
+   ========================================================================== */
+
+:root {
+  /* --- Colour primitives (from resources _n_aesthetics/) --------------------
+     cyan / mint / green are FILLS AND GRAPHICS ONLY — they fail text contrast
+     on white. Never use them for text or meaningful icons. */
+  --uwc-navy:       #13233A;
+  --uwc-teal-deep:  #0B6477;
+  --uwc-teal:       #14919B;
+  --uwc-cyan:       #0AD1C8;
+  --uwc-mint:       #45DFB1;
+  --uwc-green:      #80ED99;
+  --uwc-pale:       #CBF3F0;
+  --white:          #FFFFFF;
+
+  /* --- Semantic tokens ---------------------------------------------------- */
+  --bg:             #FFFFFF;
+  --bg-subtle:      #F3FBFA;   /* pale mint-tinted section band */
+  --surface:        #FFFFFF;
+  --surface-2:      #F3FBFA;
+  --border:         #E1EEEC;
+  --border-strong:  #C3DEDA;
+
+  --text:           #13233A;   /* uwc-navy */
+  --text-muted:     #4B5A69;
+  --text-on-fill:   #FFFFFF;   /* text sitting on teal-deep */
+
+  --primary:        #0B6477;   /* uwc-teal-deep — AA on white (~6.3:1) */
+  --primary-hover:  #14919B;
+  --primary-weak:   #CBF3F0;
+
+  --accent:         #0AD1C8;   /* decorative only */
+  --accent-mint:    #45DFB1;   /* decorative only */
+
+  --focus-ring:     #14919B;
+  --link:           #0B6477;
+  --link-hover:     #14919B;
+
+  /* status */
+  --danger:         #B23A48;   /* cancellations / urgent notices */
+  --danger-bg:      #FBEDEE;
+  --success:        #0B6477;
+  --success-bg:     #E7F6F4;
+
+  /* --- Typography ------------------------------------------------------------
+     Body face is fixed (Inter). Heading/display face is set per mockup
+     via --font-display in that mockup's own styles.css. */
+  --font-body: "Inter", -apple-system, "Segoe UI", Roboto, system-ui, sans-serif;
+  --font-display: var(--font-body); /* overridden per mockup */
+
+  /* Type scale — major third (1.25) */
+  --step--1: 0.8rem;
+  --step-0:  1rem;
+  --step-1:  1.25rem;
+  --step-2:  1.563rem;
+  --step-3:  1.953rem;
+  --step-4:  2.441rem;
+  --step-5:  3.052rem;
+
+  --leading-prose: 1.6;
+  --leading-tight: 1.2;
+  --measure: 42rem;       /* prose max-width */
+  --measure-wide: 72rem;  /* layout max-width */
+
+  /* --- Spacing scale (4px base) ---------------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* --- Radius --------------------------------------------------------- */
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* --- Shadows (keep light) ----------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(19, 35, 58, .06);
+  --shadow: 0 6px 20px rgba(19, 35, 58, .08);
+
+  /* --- Breakpoints (reference — CSS can't use vars in media queries) ---
+     sm 480 · md 768 · lg 1024 · xl 1280. Mobile-first. */
+}

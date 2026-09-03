@@ -46,15 +46,19 @@ mockup: complex data viz, 3D, heavy cross-page component reuse.
 
 ```
 mockups/
+  index.html          <- landing / chooser page; also the GitHub Pages site root
+  content.md          <- shared placeholder copy; all three pull wording from here
   shared/
     tokens.css        <- from docs/design-system.md; byte-identical in all three
+    reset.css         <- minimal modern reset, shared
+    a11y.css          <- shared a11y primitives (skip link, focus ring, sr-only)
   01-portal/
     index.html
     styles.css
     app.js            <- only if needed
     assets/
   02-editorial/
-    index.html + about.html + ... (multi-page)
+    index.html + about.html + tutors.html + schedule.html (multi-page)
     styles.css
     assets/
   03-library/
@@ -64,6 +68,9 @@ mockups/
     assets/
 ```
 
+Each mockup links back to the landing page with a slim "‹ Back to overview"
+strip (clearly not part of the design).
+
 - Fonts: Google Fonts via `<link>` with `font-display: swap`. One display face
   per direction (see `docs/mockup-briefs.md`), shared body face (Inter).
 - Images: placeholder only (local stock or `picsum.photos`). **No real student
@@ -72,6 +79,13 @@ mockups/
   shared.
 - Accessibility: WCAG 2.1 AA baseline from `docs/design-system.md` applies to
   mockups too (semantic landmarks, one h1, visible focus, contrast, 44px targets).
+
+### Hosting for the review
+
+- Repo is **public** (`theredrangerd/Peer-Coaching-Site`) so GitHub Pages is free.
+- `.github/workflows/deploy-pages.yml` publishes `mockups/` to Pages on every
+  push to `main`. Ellie gets one link; no downloads.
+- All mockup paths are **relative** so the pages also open by double-click locally.
 
 ### Explicitly rejected for Phase 0
 

@@ -1,0 +1,47 @@
+name: Deploy mockups to GitHub Pages
+
+# Publishes the contents of mockups/ to GitHub Pages on every push to main.
+# The landing page (mockups/index.html) becomes the site root; each direction
+# lives at /01-portal/, /02-editorial/, /03-library/.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "mockups/**"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; don't cancel a run in progress.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload mockups/ as the Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: mockups
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
