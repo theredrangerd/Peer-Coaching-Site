@@ -69,6 +69,7 @@
 
     var currentValue = "all";
     var activeIndex = 0;
+    var suppressNextClick = false;
 
     var setActive = function (i) {
       activeIndex = (i + options.length) % options.length;
@@ -118,11 +119,18 @@
         case "Home": e.preventDefault(); setActive(0); break;
         case "End": e.preventDefault(); setActive(options.length - 1); break;
         case "Enter":
-        case " ": e.preventDefault(); choose(activeIndex); break;
+        case " ":
+          e.preventDefault();
+          // stop the button's own keydown-generated click from re-toggling
+          suppressNextClick = true;
+          setTimeout(function () { suppressNextClick = false; }, 0);
+          choose(activeIndex);
+          break;
       }
     }
 
     btn.addEventListener("click", function () {
+      if (suppressNextClick) { suppressNextClick = false; return; }
       isOpen() ? closePanel(true) : openPanel();
     });
     btn.addEventListener("keydown", function (e) {
