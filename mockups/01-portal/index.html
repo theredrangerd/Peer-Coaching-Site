@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peer Coaching Hub — Portal mockup</title>
+<meta name="description" content="Peer Coaching Hub, Portal direction: everything on one screen — notices, timetable, coach availability, sign-up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/reset.css">
+<link rel="stylesheet" href="../shared/a11y.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Not part of the design — review navigation only -->
+<div class="review-strip">
+  <a href="../index.html">&lsaquo; Back to overview</a>
+  <span>Portal mockup &middot; placeholder content</span>
+</div>
+
+<header class="site-header" id="top">
+  <div class="bar">
+    <a class="wordmark" href="#top">
+      <span class="mark" aria-hidden="true"></span>
+      Peer Coaching&nbsp;Hub
+    </a>
+    <nav class="mainnav" aria-label="Sections">
+      <button class="nav-toggle tap" aria-expanded="false" aria-controls="navlist">
+        <span class="sr-only">Menu</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+      <ul id="navlist" role="list">
+        <li><a href="#notices">Notices</a></li>
+        <li><a href="#timetable">Timetable</a></li>
+        <li><a href="#availability">Availability</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#coaches">Coaches</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary header-cta" href="#signup">Sign up</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">UWCSEA &middot; free, student to student</p>
+        <h1 id="hero-h">Get help this week.</h1>
+        <p class="hero-sub">
+          Peer Coaching pairs students who are strong in a subject with students
+          who want to lift their grades — at no cost. Check what&rsquo;s on,
+          see who&rsquo;s free, and sign up below.
+        </p>
+        <div class="hero-actions" id="signup">
+          <a class="btn btn-primary" href="#">Sign up for coaching</a>
+          <a class="btn btn-ghost" href="#">Become a peer coach</a>
+        </div>
+        <p class="hero-note">Forms open in a new tab &middot; matched within about a week</p>
+      </div>
+      <ul class="stat-cards" role="list" aria-label="At a glance">
+        <li><span class="stat-num">12</span><span class="stat-label">subjects covered</span></li>
+        <li><span class="stat-num">30+</span><span class="stat-label">trained coaches</span></li>
+        <li><span class="stat-num">$0</span><span class="stat-label">always free</span></li>
+        <li><span class="stat-num">4</span><span class="stat-label">days a week on campus</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- NOTICES -->
+  <section id="notices" class="section" aria-labelledby="notices-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="notices-h">Notices</h2>
+        <p class="section-sub">What&rsquo;s changed this week.</p>
+      </div>
+      <ul class="notice-list" role="list">
+        <li class="notice notice--urgent">
+          <span class="notice-tag" aria-hidden="true">Urgent</span>
+          <div>
+            <p class="notice-title">Sessions paused 10&ndash;21 March for internal mock exams</p>
+            <p class="notice-body">Coaching resumes Monday 24 March. Coaches are still reachable by email for quick questions.</p>
+          </div>
+        </li>
+        <li class="notice">
+          <span class="notice-tag notice-tag--info" aria-hidden="true">New</span>
+          <div>
+            <p class="notice-title">Extra Economics slots on Fridays</p>
+            <p class="notice-body">Added from this week in Study Hall B, lunch.</p>
+          </div>
+        </li>
+        <li class="notice">
+          <span class="notice-tag notice-tag--info" aria-hidden="true">Coaches</span>
+          <div>
+            <p class="notice-title">Y13 coaches: confirm Term 2 availability by Friday</p>
+            <p class="notice-body">Use the availability form linked in the coach channel.</p>
+          </div>
+        </li>
+        <li class="notice">
+          <span class="notice-tag notice-tag--info" aria-hidden="true">Resources</span>
+          <div>
+            <p class="notice-title">Past Paper Hub updated</p>
+            <p class="notice-body">2024 November session papers added for all sciences.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS -->
+  <section class="section section--tint" aria-labelledby="quick-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="quick-h">Jump to</h2>
+        <p class="section-sub">Everything the programme runs on, one click away.</p>
+      </div>
+      <ul class="quick-grid" role="list">
+        <li><a href="#timetable" class="quick-card"><span class="qc-title">Timetable</span><span class="qc-desc">When and where sessions run</span></a></li>
+        <li><a href="#availability" class="quick-card"><span class="qc-title">Coach availability</span><span class="qc-desc">Who has a free slot, by day</span></a></li>
+        <li><a href="#subjects" class="quick-card"><span class="qc-title">Subjects</span><span class="qc-desc">What we cover this term</span></a></li>
+        <li><a href="#coaches" class="quick-card"><span class="qc-title">Meet the coaches</span><span class="qc-desc">Who you might be matched with</span></a></li>
+        <li><a href="#resources" class="quick-card"><span class="qc-title">Revision resources</span><span class="qc-desc">Past papers, channels, learning with AI</span></a></li>
+        <li><a href="#faq" class="quick-card"><span class="qc-title">FAQ</span><span class="qc-desc">How sign-up and sessions work</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TIMETABLE -->
+  <section id="timetable" class="section" aria-labelledby="tt-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="tt-h">Timetable</h2>
+        <p class="section-sub"><span class="pill pill--sample">Sample</span> Term 1 &middot; real timetable not yet finalised</p>
+      </div>
+      <div class="table-scroll">
+        <table class="tt">
+          <caption class="sr-only">Weekly Peer Coaching timetable, sample for Term 1</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Time</th>
+              <th scope="col">Location</th>
+              <th scope="col">Focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Monday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Maths &amp; Sciences</td></tr>
+            <tr><th scope="row">Tuesday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Humanities &amp; English</td></tr>
+            <tr class="tt-off"><th scope="row">Wednesday</th><td>&mdash;</td><td>&mdash;</td><td>No sessions (staff meeting)</td></tr>
+            <tr><th scope="row">Thursday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Maths &amp; Sciences</td></tr>
+            <tr><th scope="row">Friday</th><td>12:45&ndash;13:25</td><td>Study Hall B</td><td>Languages &amp; Economics</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVAILABILITY -->
+  <section id="availability" class="section section--tint" aria-labelledby="av-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="av-h">Coach availability</h2>
+        <p class="section-sub"><span class="pill pill--sample">Sample</span> A filled square means that coach has a bookable slot that day.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="heat">
+          <caption class="sr-only">Coach availability by weekday, sample data</caption>
+          <thead>
+            <tr>
+              <th scope="col">Coach</th>
+              <th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Aisha R. <span class="hsub">Maths, Physics</span></th><td class="on"><span class="sr-only">free</span></td><td><span class="sr-only">&ndash;</span></td><td><span class="sr-only">&ndash;</span></td><td class="on"><span class="sr-only">free</span></td><td class="on"><span class="sr-only">free</span></td></tr>
+            <tr><th scope="row">Daniel K. <span class="hsub">Chemistry, Biology</span></th><td></td><td class="on"><span class="sr-only">free</span></td><td></td><td class="on"><span class="sr-only">free</span></td><td></td></tr>
+            <tr><th scope="row">Mei-Lin T. <span class="hsub">Economics, Maths</span></th><td class="on"><span class="sr-only">free</span></td><td></td><td class="on"><span class="sr-only">free</span></td><td></td><td class="on"><span class="sr-only">free</span></td></tr>
+            <tr><th scope="row">Sofia G. <span class="hsub">English, History</span></th><td></td><td class="on"><span class="sr-only">free</span></td><td></td><td class="on"><span class="sr-only">free</span></td><td class="on"><span class="sr-only">free</span></td></tr>
+            <tr><th scope="row">Arjun P. <span class="hsub">CS, Maths</span></th><td class="on"><span class="sr-only">free</span></td><td></td><td class="on"><span class="sr-only">free</span></td><td></td><td></td></tr>
+            <tr><th scope="row">Noah B. <span class="hsub">Physics, Maths</span></th><td></td><td class="on"><span class="sr-only">free</span></td><td class="on"><span class="sr-only">free</span></td><td></td><td class="on"><span class="sr-only">free</span></td></tr>
+            <tr><th scope="row">Hannah W. <span class="hsub">Biology, Chemistry</span></th><td class="on"><span class="sr-only">free</span></td><td></td><td></td><td class="on"><span class="sr-only">free</span></td><td></td></tr>
+            <tr><th scope="row">Yusuf A. <span class="hsub">Geography, Economics</span></th><td></td><td class="on"><span class="sr-only">free</span></td><td></td><td></td><td class="on"><span class="sr-only">free</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="hint">To book, sign up and a coordinator matches you with a coach who shares a free slot.</p>
+    </div>
+  </section>
+
+  <!-- SUBJECTS -->
+  <section id="subjects" class="section" aria-labelledby="sub-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="sub-h">Subjects this term</h2>
+        <p class="section-sub">Availability shifts term to term with coach numbers.</p>
+      </div>
+      <ul class="chips" role="list">
+        <li>Mathematics</li><li>Physics</li><li>Chemistry</li><li>Biology</li>
+        <li>Economics</li><li>English Literature</li><li>History</li><li>Geography</li>
+        <li>Computer Science</li><li>Mandarin</li><li>Spanish</li><li>French</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COACHES -->
+  <section id="coaches" class="section section--tint" aria-labelledby="co-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="co-h">Meet the coaches</h2>
+        <p class="section-sub"><span class="pill pill--sample">Placeholder</span> Invented profiles &middot; monogram avatars, not photos.</p>
+      </div>
+      <ul class="coach-grid" role="list">
+        <li class="coach">
+          <span class="avatar" data-mono="AR" aria-hidden="true">AR</span>
+          <p class="coach-name">Aisha R. <span class="coach-year">Y13</span></p>
+          <p class="coach-subj">Maths &middot; Physics</p>
+          <p class="coach-bio">&ldquo;I went from a 5 to a 7 in HL Maths by changing how I revised, not how long.&rdquo;</p>
+          <p class="coach-tag">Exam technique</p>
+        </li>
+        <li class="coach">
+          <span class="avatar" data-mono="DK" aria-hidden="true">DK</span>
+          <p class="coach-name">Daniel K. <span class="coach-year">Y13</span></p>
+          <p class="coach-subj">Chemistry &middot; Biology</p>
+          <p class="coach-bio">&ldquo;Sciences click when you stop memorising and start asking why.&rdquo;</p>
+          <p class="coach-tag">Building intuition</p>
+        </li>
+        <li class="coach">
+          <span class="avatar" data-mono="MT" aria-hidden="true">MT</span>
+          <p class="coach-name">Mei-Lin T. <span class="coach-year">Y12</span></p>
+          <p class="coach-subj">Economics &middot; Maths</p>
+          <p class="coach-bio">&ldquo;Past papers are the whole game. I&rsquo;ll show you how to use them properly.&rdquo;</p>
+          <p class="coach-tag">Past-paper drills</p>
+        </li>
+        <li class="coach">
+          <span class="avatar" data-mono="SG" aria-hidden="true">SG</span>
+          <p class="coach-name">Sofia G. <span class="coach-year">Y13</span></p>
+          <p class="coach-subj">English Lit &middot; History</p>
+          <p class="coach-bio">&ldquo;Essay structure is a skill you can learn in a week, not a talent.&rdquo;</p>
+          <p class="coach-tag">Essay planning</p>
+        </li>
+        <li class="coach">
+          <span class="avatar" data-mono="AP" aria-hidden="true">AP</span>
+          <p class="coach-name">Arjun P. <span class="coach-year">Y12</span></p>
+          <p class="coach-subj">Computer Science &middot; Maths</p>
+          <p class="coach-bio">&ldquo;We&rsquo;ll get you writing code you actually understand, line by line.&rdquo;</p>
+          <p class="coach-tag">Coding fundamentals</p>
+        </li>
+        <li class="coach">
+          <span class="avatar" data-mono="HW" aria-hidden="true">HW</span>
+          <p class="coach-name">Hannah W. <span class="coach-year">Y12</span></p>
+          <p class="coach-subj">Biology &middot; Chemistry</p>
+          <p class="coach-bio">&ldquo;Diagrams and flashcards that actually stick. I&rsquo;ll help you make them.&rdquo;</p>
+          <p class="coach-tag">Revision systems</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section id="resources" class="section" aria-labelledby="res-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="res-h">Revision resources</h2>
+        <p class="section-sub">Curated by the coaches. Kept short on purpose.</p>
+      </div>
+      <ul class="res-grid" role="list">
+        <li class="res-card">
+          <h3>Past Paper Hub</h3>
+          <p>Official past papers and mark schemes by subject and level. We link to the exam boards rather than re-hosting.</p>
+          <a class="inline-link" href="#">Browse papers &rarr;</a>
+        </li>
+        <li class="res-card">
+          <h3>YouTube channels that work</h3>
+          <p>Five channels the coaches actually use, each with a note on what it&rsquo;s good for &mdash; and when to stop watching and start practising.</p>
+          <a class="inline-link" href="#">See the list &rarr;</a>
+        </li>
+        <li class="res-card">
+          <h3>Learning with AI</h3>
+          <p>How to use AI tools to learn, not to hand in. <span class="pill pill--sample">Draft</span> Pending a check against the school&rsquo;s academic-integrity policy.</p>
+          <a class="inline-link" href="#">Read the guide &rarr;</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section--tint" aria-labelledby="faq-h">
+    <div class="wrap wrap--narrow">
+      <div class="section-head">
+        <h2 id="faq-h">FAQ</h2>
+        <p class="section-sub">Answers to confirm with coordinators.</p>
+      </div>
+      <div class="accordion">
+        <details>
+          <summary>How do I sign up for coaching?</summary>
+          <div class="acc-body"><p>Fill in the student sign-up form linked at the top of this page. You&rsquo;ll give your subject, current level and free periods. A coordinator matches you with a coach within about a week.</p></div>
+        </details>
+        <details>
+          <summary>How do I become a peer coach?</summary>
+          <div class="acc-body"><p>Use the &ldquo;Become a peer coach&rdquo; form. You&rsquo;ll usually need a 6 or 7 in the subject at your current level and a teacher recommendation. Coaches get a short training session first.</p></div>
+        </details>
+        <details>
+          <summary>Does it cost anything?</summary>
+          <div class="acc-body"><p>No. Peer Coaching is completely free &mdash; that is the point of the programme.</p></div>
+        </details>
+        <details>
+          <summary>How much time does it take?</summary>
+          <div class="acc-body"><p>Most pairs meet once or twice a week for 30&ndash;40 minutes, usually at lunch or in a shared study period. You agree the schedule with your coach.</p></div>
+        </details>
+        <details>
+          <summary>What happens in a session?</summary>
+          <div class="acc-body"><p>Not a lecture. Coaches work through problems with you, look at your past papers, help you plan essays or revision, and share study habits that worked for them. You bring what you&rsquo;re stuck on.</p></div>
+        </details>
+        <details>
+          <summary>What if it&rsquo;s not working out?</summary>
+          <div class="acc-body"><p>Tell a coordinator. Re-matching is normal and no one takes it personally &mdash; the right fit matters more than the first pairing.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts" class="section" aria-labelledby="con-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="con-h">Contacts</h2>
+        <p class="section-sub"><span class="pill pill--sample">Placeholder</span> Which addresses are public is still to be confirmed.</p>
+      </div>
+      <ul class="contact-grid" role="list">
+        <li class="contact-card">
+          <p class="contact-role">Programme email</p>
+          <p class="contact-detail">peercoaching@example.uwcsea.edu.sg</p>
+          <p class="contact-note">General questions, sign-up help.</p>
+        </li>
+        <li class="contact-card">
+          <p class="contact-role">Student coordinator</p>
+          <p class="contact-detail">Role title only</p>
+          <p class="contact-note">Matching, scheduling, re-matching.</p>
+        </li>
+        <li class="contact-card">
+          <p class="contact-role">Coordinator &mdash; coaches &amp; resources</p>
+          <p class="contact-detail">Role title only</p>
+          <p class="contact-note">Becoming a coach, the resource library.</p>
+        </li>
+        <li class="contact-card">
+          <p class="contact-role">Staff lead</p>
+          <p class="contact-detail">Head of Learning&rsquo;s office, via the school</p>
+          <p class="contact-note">Programme oversight.</p>
+        </li>
+      </ul>
+      <p class="feedback-line">
+        Had a session? <a class="inline-link" href="#">Tell us how it went &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="wordmark wordmark--foot" href="#top"><span class="mark" aria-hidden="true"></span> Peer Coaching Hub</a>
+      <p class="foot-note">Free peer tutoring at UWCSEA. Portal mockup for design review &mdash; placeholder content, no real student data.</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul role="list" class="foot-links">
+        <li><a href="#notices">Notices</a></li>
+        <li><a href="#timetable">Timetable</a></li>
+        <li><a href="#availability">Availability</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="../index.html">Back to overview</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
