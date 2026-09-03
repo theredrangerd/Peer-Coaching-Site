@@ -142,23 +142,30 @@
       </div>
 
       <div class="tt-filter">
-        <label for="tt-subject">Show sessions for</label>
-        <div class="select-wrap">
-          <select id="tt-subject">
-            <option value="all">All subjects</option>
-            <option value="Mathematics">Mathematics</option>
-            <option value="Physics">Physics</option>
-            <option value="Chemistry">Chemistry</option>
-            <option value="Biology">Biology</option>
-            <option value="Economics">Economics</option>
-            <option value="English Literature">English Literature</option>
-            <option value="History">History</option>
-            <option value="Geography">Geography</option>
-            <option value="Computer Science">Computer Science</option>
-            <option value="Mandarin">Mandarin</option>
-            <option value="Spanish">Spanish</option>
-            <option value="French">French</option>
-          </select>
+        <span class="tt-filter-label" id="tt-label">Show sessions for</span>
+        <div class="cselect" id="tt-cselect">
+          <button type="button" class="cselect-btn" id="tt-cselect-btn"
+                  aria-haspopup="listbox" aria-expanded="false"
+                  aria-labelledby="tt-label tt-cselect-value">
+            <span class="cselect-value" id="tt-cselect-value">All subjects</span>
+            <span class="cselect-chev" aria-hidden="true"></span>
+          </button>
+          <ul class="cselect-panel" id="tt-cselect-panel" role="listbox"
+              aria-labelledby="tt-label" tabindex="-1" hidden>
+            <li class="cselect-option" role="option" data-value="all" aria-selected="true">All subjects</li>
+            <li class="cselect-option" role="option" data-value="Mathematics" aria-selected="false">Mathematics</li>
+            <li class="cselect-option" role="option" data-value="Physics" aria-selected="false">Physics</li>
+            <li class="cselect-option" role="option" data-value="Chemistry" aria-selected="false">Chemistry</li>
+            <li class="cselect-option" role="option" data-value="Biology" aria-selected="false">Biology</li>
+            <li class="cselect-option" role="option" data-value="Economics" aria-selected="false">Economics</li>
+            <li class="cselect-option" role="option" data-value="English Literature" aria-selected="false">English Literature</li>
+            <li class="cselect-option" role="option" data-value="History" aria-selected="false">History</li>
+            <li class="cselect-option" role="option" data-value="Geography" aria-selected="false">Geography</li>
+            <li class="cselect-option" role="option" data-value="Computer Science" aria-selected="false">Computer Science</li>
+            <li class="cselect-option" role="option" data-value="Mandarin" aria-selected="false">Mandarin</li>
+            <li class="cselect-option" role="option" data-value="Spanish" aria-selected="false">Spanish</li>
+            <li class="cselect-option" role="option" data-value="French" aria-selected="false">French</li>
+          </ul>
         </div>
         <p class="tt-count" id="tt-count" aria-live="polite"></p>
       </div>
