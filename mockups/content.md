@@ -34,7 +34,9 @@ Anything a coordinator still needs to supply is marked `[TBC]`.
 | **Library** | A browsable reference — best if the revision resources are the part that keeps growing. |
 
 **Footer note:** Built for the Peer Coaching coordinators · for design review by
-Ellie Alchin (Head of Learning) · placeholder content, no real student data.
+the Head of Learning · placeholder content, no real student data.
+
+(The reviewer is named in `docs/`, not on the site itself.)
 
 ---
 
