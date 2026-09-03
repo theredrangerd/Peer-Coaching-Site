@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Peer Coaching Hub — shared accessibility primitives
+   WCAG 2.1 AA baseline (docs/design-system.md). Shared across all mockups.
+   ========================================================================== */
+
+/* Visible focus for keyboard users on every interactive element. */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+/* Don't show the ring for mouse clicks in browsers that support :focus-visible. */
+:focus:not(:focus-visible) { outline: none; }
+
+/* Skip link — visually hidden until focused. */
+.skip-link {
+  position: absolute;
+  left: var(--space-3);
+  top: var(--space-3);
+  transform: translateY(-150%);
+  transition: transform .15s ease;
+  background: var(--primary);
+  color: var(--text-on-fill);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  z-index: 999;
+  text-decoration: none;
+}
+.skip-link:focus { transform: translateY(0); }
+
+/* Screen-reader-only utility. */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Interactive targets meet the 44px minimum. Applies to standalone controls;
+   inline links inside prose are exempt (they inherit the line box).
+   Each mockup adds .tap to nav links / icon buttons that need explicit sizing. */
+button, [role="button"], summary, .tap {
+  min-height: 44px;
+  min-width: 44px;
+}
+:where(button, [role="button"], .tap) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Respect reduced-motion — no essential info conveyed by motion alone. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
