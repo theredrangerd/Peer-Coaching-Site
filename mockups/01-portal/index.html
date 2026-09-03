@@ -53,12 +53,12 @@
   <section class="hero" aria-labelledby="hero-h">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">UWCSEA &middot; free, student to student</p>
+        <p class="eyebrow">UWCSEA &middot; student to student</p>
         <h1 id="hero-h">Get help this week.</h1>
         <p class="hero-sub">
           Peer Coaching pairs students who are strong in a subject with students
-          who want to lift their grades — at no cost. Check what&rsquo;s on,
-          see who&rsquo;s free, and sign up below.
+          who want to lift their grades and build better study habits. Check
+          what&rsquo;s on, see who&rsquo;s free, and sign up below.
         </p>
         <div class="hero-actions" id="signup">
           <a class="btn btn-primary" href="#">Sign up for coaching</a>
@@ -69,7 +69,7 @@
       <ul class="stat-cards" role="list" aria-label="At a glance">
         <li><span class="stat-num">12</span><span class="stat-label">subjects covered</span></li>
         <li><span class="stat-num">30+</span><span class="stat-label">trained coaches</span></li>
-        <li><span class="stat-num">$0</span><span class="stat-label">always free</span></li>
+        <li><span class="stat-num">~1 wk</span><span class="stat-label">to get matched</span></li>
         <li><span class="stat-num">4</span><span class="stat-label">days a week on campus</span></li>
       </ul>
     </div>
@@ -140,26 +140,59 @@
         <h2 id="tt-h">Timetable</h2>
         <p class="section-sub"><span class="pill pill--sample">Sample</span> Term 1 &middot; real timetable not yet finalised</p>
       </div>
+
+      <div class="tt-filter">
+        <label for="tt-subject">Show sessions for</label>
+        <div class="select-wrap">
+          <select id="tt-subject">
+            <option value="all">All subjects</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Biology">Biology</option>
+            <option value="Economics">Economics</option>
+            <option value="English Literature">English Literature</option>
+            <option value="History">History</option>
+            <option value="Geography">Geography</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Mandarin">Mandarin</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+          </select>
+        </div>
+        <p class="tt-count" id="tt-count" aria-live="polite"></p>
+      </div>
+
       <div class="table-scroll">
         <table class="tt">
-          <caption class="sr-only">Weekly Peer Coaching timetable, sample for Term 1</caption>
+          <caption class="sr-only">Weekly Peer Coaching timetable, sample for Term 1. Use the subject menu above to filter.</caption>
           <thead>
             <tr>
               <th scope="col">Day</th>
               <th scope="col">Time</th>
               <th scope="col">Location</th>
-              <th scope="col">Focus</th>
+              <th scope="col">Subject</th>
             </tr>
           </thead>
-          <tbody>
-            <tr><th scope="row">Monday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Maths &amp; Sciences</td></tr>
-            <tr><th scope="row">Tuesday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Humanities &amp; English</td></tr>
-            <tr class="tt-off"><th scope="row">Wednesday</th><td>&mdash;</td><td>&mdash;</td><td>No sessions (staff meeting)</td></tr>
-            <tr><th scope="row">Thursday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Maths &amp; Sciences</td></tr>
-            <tr><th scope="row">Friday</th><td>12:45&ndash;13:25</td><td>Study Hall B</td><td>Languages &amp; Economics</td></tr>
+          <tbody id="tt-body">
+            <tr data-subject="Mathematics"><th scope="row">Monday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Mathematics</td></tr>
+            <tr data-subject="Physics"><th scope="row">Monday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Physics</td></tr>
+            <tr data-subject="Computer Science"><th scope="row">Monday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Computer Science</td></tr>
+            <tr data-subject="English Literature"><th scope="row">Tuesday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>English Literature</td></tr>
+            <tr data-subject="History"><th scope="row">Tuesday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>History</td></tr>
+            <tr data-subject="Geography"><th scope="row">Tuesday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Geography</td></tr>
+            <tr class="tt-off" data-subject="none"><th scope="row">Wednesday</th><td>&mdash;</td><td>&mdash;</td><td>No sessions (staff meeting)</td></tr>
+            <tr data-subject="Chemistry"><th scope="row">Thursday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Chemistry</td></tr>
+            <tr data-subject="Biology"><th scope="row">Thursday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Biology</td></tr>
+            <tr data-subject="Mathematics"><th scope="row">Thursday</th><td>12:45&ndash;13:25</td><td>Library, Level 2</td><td>Mathematics</td></tr>
+            <tr data-subject="Economics"><th scope="row">Friday</th><td>12:45&ndash;13:25</td><td>Study Hall B</td><td>Economics</td></tr>
+            <tr data-subject="Mandarin"><th scope="row">Friday</th><td>12:45&ndash;13:25</td><td>Study Hall B</td><td>Mandarin</td></tr>
+            <tr data-subject="Spanish"><th scope="row">Friday</th><td>12:45&ndash;13:25</td><td>Study Hall B</td><td>Spanish</td></tr>
+            <tr data-subject="French"><th scope="row">Friday</th><td>12:45&ndash;13:25</td><td>Study Hall B</td><td>French</td></tr>
           </tbody>
         </table>
       </div>
+      <p class="tt-empty" id="tt-empty" hidden>No sample sessions listed for that subject yet &mdash; sign up anyway and a coordinator will match you.</p>
     </div>
   </section>
 
@@ -170,6 +203,11 @@
         <h2 id="av-h">Coach availability</h2>
         <p class="section-sub"><span class="pill pill--sample">Sample</span> A filled square means that coach has a bookable slot that day.</p>
       </div>
+      <p class="builder-note">
+        <strong>Builder&rsquo;s note:</strong> this grid is a rough placeholder. A
+        later version will be fitted out properly &mdash; filter by subject, show
+        specific times, and let you request a slot directly from here.
+      </p>
       <div class="table-scroll">
         <table class="heat">
           <caption class="sr-only">Coach availability by weekday, sample data</caption>
@@ -368,7 +406,7 @@
   <div class="wrap footer-grid">
     <div>
       <a class="wordmark wordmark--foot" href="#top"><span class="mark" aria-hidden="true"></span> Peer Coaching Hub</a>
-      <p class="foot-note">Free peer tutoring at UWCSEA. Portal mockup for design review &mdash; placeholder content, no real student data.</p>
+      <p class="foot-note">Peer tutoring at UWCSEA. Portal mockup for design review &mdash; placeholder content, no real student data.</p>
     </div>
     <nav aria-label="Footer">
       <ul role="list" class="foot-links">
