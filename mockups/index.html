@@ -61,6 +61,21 @@
   }
   .ask strong { color: var(--text); }
 
+  .note {
+    margin-top: var(--space-7);
+    max-width: 46rem;
+    padding-left: var(--space-5);
+    border-left: 3px solid var(--accent-mint);
+  }
+  .note-head {
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: var(--space-2);
+  }
+  .note p + p { margin-top: var(--space-3); }
+  .note p:not(.note-head) { color: var(--text-muted); }
+  .note .sign { margin-top: var(--space-3); font-style: normal; color: var(--text); }
+
   .cards {
     margin-top: var(--space-8);
     display: grid; gap: var(--space-5);
@@ -149,6 +164,27 @@
       <strong>What we&rsquo;re asking:</strong> which structure fits the programme
       best? Not which page looks most finished — these are quick mockups with
       placeholder text and invented people. No real student data.
+    </div>
+
+    <div class="note">
+      <p class="note-head">Where this is at — a note from the owner</p>
+      <p>
+        These three mockups are the whole of Phase 0, and there&rsquo;s really
+        only one decision they&rsquo;re built to unlock: <strong>which structure
+        &mdash; Portal, Editorial or Library &mdash; should the Peer Coaching Hub
+        be built on?</strong> The content and the palette are settled; the layout
+        is not. Once a direction is picked, the next step is one proper build on
+        that shape, with real tutor bios and the live timetable.
+      </p>
+      <p>
+        To address the data question directly: the finished site will not
+        harvest data, store any student information, or carry advertising. There
+        is no backend and no database, no analytics and no third-party tracking,
+        and sign-ups hand off to the school&rsquo;s own forms rather than
+        collecting anything here. I build and run the entire site myself, so
+        I can say that with certainty and keep it that way.
+      </p>
+      <p class="sign">&mdash; the owner</p>
     </div>
 
     <div class="cards">
