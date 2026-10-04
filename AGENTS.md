@@ -9,7 +9,7 @@ A website that acts as the central hub for the **Peer Coaching** programme at
 **UWCSEA** (United World College of South East Asia, Singapore).
 
 Peer Coaching pairs students who are excelling in a subject with peers who
-want to be brought up to speed. All coaches are **Grade 11** (first year of the IB Diploma) and
+want to be brought up to speed. All coaches are **Grade 11** (first year of the IB) and
 ahead of the curve: Grade 9/10 coachees get a coach who took that course
 earlier; Grade 11 coachees get a coach in the same IB course now. That is the
 main selling point and the core of the pitch. It is a legitimate alternative to

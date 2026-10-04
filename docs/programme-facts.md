@@ -51,7 +51,6 @@ summary. Source of truth for what the site may claim.
   per pair. The handout says: five fixed slots, sessions of up to four students.
   The site follows the handout.
 - Owner said earlier: coaches take the same courses "at the same time".
-  RESOLVED 2026-10-04: all 12 coaches are Grade 11, in the first year of the IB
-  Diploma. For Grade 9/10 coachees the coach took that course earlier; for
+  RESOLVED 2026-10-04: all 12 coaches are Grade 11, in the first year of the IB. For Grade 9/10 coachees the coach took that course earlier; for
   Grade 11 coachees the coach is in the same IB course now. Copy covers both.
 - Session size and fixed slots: owner said to trust the handout (RESOLVED).
