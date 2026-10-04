@@ -5,24 +5,6 @@
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* --- light / dark toggle (choice is remembered; dark is the default) --- */
-  var root = document.documentElement;
-  var themeBtn = document.querySelector(".theme-toggle");
-  function syncThemeBtn() {
-    var light = root.getAttribute("data-theme") === "light";
-    themeBtn.setAttribute("aria-pressed", String(light));
-    themeBtn.setAttribute("aria-label", light ? "Switch to dark mode" : "Switch to light mode");
-  }
-  if (themeBtn) {
-    syncThemeBtn();
-    themeBtn.addEventListener("click", function () {
-      var light = root.getAttribute("data-theme") !== "light";
-      if (light) root.setAttribute("data-theme", "light"); else root.removeAttribute("data-theme");
-      try { localStorage.setItem("pc-theme", light ? "light" : "dark"); } catch (e) {}
-      syncThemeBtn();
-    });
-  }
-
   /* --- header: transparent over the hero, solid once you scroll --- */
   var header = document.querySelector(".site-header");
   function onScroll() { header.classList.toggle("is-solid", window.scrollY > 40); }
