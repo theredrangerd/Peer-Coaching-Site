@@ -33,7 +33,7 @@
   var groups = [
     ".section-head", ".split > *", ".aside-card",
     ".why-row", ".steps li", ".path", ".trust h2", ".trust-grid > div",
-    ".accordion", ".contact-card", ".feedback-line"
+    ".accordion", ".contact-card", ".feedback-card"
   ];
   groups.forEach(function (sel) {
     document.querySelectorAll("main " + sel).forEach(function (el, i) {

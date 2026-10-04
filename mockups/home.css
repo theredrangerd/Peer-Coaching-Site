@@ -157,6 +157,50 @@
 .path h3 { font-size: var(--step-2); font-weight: 500; margin-top: var(--space-2); }
 .path p:last-child { color: #d6ebe9; margin-top: var(--space-3); max-width: 46ch; }
 
+/* --- feedback: its own highlighted section above the FAQ ------------------ */
+.feedback-grid { display: grid; gap: var(--space-4); margin-top: var(--space-6); }
+@media (min-width: 760px) { .feedback-grid { grid-template-columns: 1fr 1fr; gap: var(--space-5); } }
+.feedback-card {
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding: var(--space-6);
+  background: var(--uwc-pale); color: var(--text);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 40px rgba(0,0,0,.18);
+}
+@media (min-width: 900px) { .feedback-card { padding: var(--space-7); } }
+.feedback-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; border-radius: var(--radius-full);
+  background: var(--uwc-teal-deep); color: #fff;
+}
+.feedback-icon svg { width: 26px; height: 26px; }
+.feedback-who { margin-top: var(--space-5); font-size: var(--step--1); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--primary); }
+.band--deep .feedback-card h3 { color: var(--text); font-size: var(--step-3); font-weight: 500; line-height: 1.12; margin-top: var(--space-2); }
+.feedback-card p:not(.feedback-who) { color: #35566a; margin-top: var(--space-3); margin-bottom: var(--space-6); max-width: 44ch; }
+
+/* the call to action: big, solid, impossible to miss */
+.feedback-btn {
+  position: relative; align-self: stretch; margin-top: auto;
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-3);
+  padding: var(--space-5) var(--space-6);
+  background: var(--uwc-navy); color: #fff; text-decoration: none;
+  font-size: var(--step-1); font-weight: 700; line-height: 1.1;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 24px rgba(19,35,58,.28);
+  transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+  animation: btn-pulse 2.6s ease-out infinite;
+}
+.feedback-btn svg { width: 1.3em; height: 1.3em; flex: none; color: var(--uwc-mint); transition: transform .15s ease; }
+.feedback-btn:hover { background: var(--uwc-teal-deep); color: #fff; transform: translateY(-2px); box-shadow: 0 14px 30px rgba(19,35,58,.34); animation-play-state: paused; }
+.feedback-btn:hover svg { transform: translateX(4px); }
+.feedback-btn:focus-visible { outline: 3px solid var(--uwc-mint); outline-offset: 3px; }
+@keyframes btn-pulse {
+  0%   { box-shadow: 0 10px 24px rgba(19,35,58,.28), 0 0 0 0 rgba(10,209,200,.55); }
+  70%  { box-shadow: 0 10px 24px rgba(19,35,58,.28), 0 0 0 16px rgba(10,209,200,0); }
+  100% { box-shadow: 0 10px 24px rgba(19,35,58,.28), 0 0 0 0 rgba(10,209,200,0); }
+}
+@media (prefers-reduced-motion: reduce) { .feedback-btn { animation: none; } }
+
 /* --- motion ------------------------------------------------------------ */
 .js .rise { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
 .js .rise.in { opacity: 1; transform: none; }
