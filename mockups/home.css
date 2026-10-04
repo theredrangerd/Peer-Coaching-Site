@@ -31,6 +31,29 @@
 .home .site-header.is-solid .btn-primary:hover { background: var(--primary-hover); color: #fff; }
 
 
+/* theme toggle (dark/light) */
+.theme-toggle {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; margin-left: var(--space-2);
+  border-radius: var(--radius-full); cursor: pointer;
+  background: transparent; color: #fff;
+  border: 1px solid rgba(255,255,255,.4);
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+.theme-toggle:hover { background: rgba(255,255,255,.14); border-color: #fff; }
+.theme-toggle svg { width: 18px; height: 18px; }
+.theme-toggle .icon-moon { display: none; }
+[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+.home .site-header.is-solid .theme-toggle { color: var(--text); border-color: var(--border-strong); }
+.home .site-header.is-solid .theme-toggle:hover { background: var(--primary-weak); border-color: var(--primary); }
+[data-theme="light"] .theme-toggle { color: var(--text); border-color: var(--border-strong); }
+[data-theme="light"] .theme-toggle:hover { background: #fff; border-color: var(--primary); }
+[data-theme="light"] .home .site-header.is-solid .theme-toggle:hover { background: var(--primary-weak); }
+.theme-toggle { box-sizing: border-box; }
+.header-cta { margin-left: var(--space-2); white-space: nowrap; }
+@media (min-width: 1061px) { .home .mainnav a { padding-inline: var(--space-2); } } /* room for the toggle */
+
 /* dropdown menu on small screens is a white panel: keep its links dark */
 @media (max-width: 1060px) {
   .home .site-header #navlist a { color: var(--text-muted); }
