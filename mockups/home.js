@@ -14,14 +14,14 @@
   /* --- scroll reveals: tag the below-the-fold blocks, stagger siblings --- */
   var groups = [
     ".section-head", ".split > *", ".aside-card",
-    ".why-row", ".steps li", ".trust h2", ".trust-grid > div",
+    ".why-row", ".steps li", ".path", ".trust h2", ".trust-grid > div",
     ".accordion", ".contact-card", ".feedback-line"
   ];
   groups.forEach(function (sel) {
     document.querySelectorAll("main " + sel).forEach(function (el, i) {
       if (el.closest(".hero") || el.classList.contains("rise")) return;
       el.classList.add("rise");
-      if (sel === ".steps li" || sel === ".trust-grid > div" || sel === ".contact-card") {
+      if (sel === ".steps li" || sel === ".path" || sel === ".trust-grid > div" || sel === ".contact-card") {
         el.style.setProperty("--d", (i % 4) * 0.1 + "s");
       }
     });
