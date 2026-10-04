@@ -7,13 +7,15 @@
 <meta name="description" content="Peer Coaching at UWCSEA: small, focused sessions with students who recently excelled in the same courses. Open to Grades 9 to 11. Supported by the Head of Learning.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared/tokens.css">
 <link rel="stylesheet" href="shared/reset.css">
 <link rel="stylesheet" href="shared/a11y.css">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
-<body>
+<body class="home">
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header" id="top">
@@ -45,30 +47,39 @@
 
   <!-- HERO -->
   <section class="hero" aria-labelledby="hero-h">
+    <span class="blob blob--cyan" aria-hidden="true"></span>
+    <span class="blob blob--mint" aria-hidden="true"></span>
+    <span class="grain" aria-hidden="true"></span>
+
     <div class="wrap">
-      <h1 id="hero-h">Get up to speed with students who recently excelled in your courses.</h1>
-      <p class="hero-sub">
+      <p class="eyebrow rise" style="--d:.05s">UWCSEA Peer Coaching &middot; 2026&ndash;27</p>
+      <h1 id="hero-h" class="rise" style="--d:.15s">Get up to speed with students who <em>recently excelled</em> in your courses.</h1>
+      <p class="hero-sub rise" style="--d:.3s">
         Peer coaches are Grade 11 UWCSEA students who did exceptionally well in
         the course you are taking, or are doing so now in the IB. We
         remember which parts were hard. In small, focused sessions we help you
         with whatever you are stuck on. Supported by the Head of Learning.</p>
-      <div class="hero-actions" id="signup">
+      <div class="hero-actions rise" id="signup" style="--d:.45s">
         <a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSf1Z1Iq5IEXSOcfdVRDhCTiiGeBbZqanfJGEhni4e6G5SWXrQ/viewform?usp=dialog" target="_blank" rel="noopener">Sign up for coaching</a>
         <a class="btn btn-ghost btn-lg" href="resources.html">Browse revision resources</a>
       </div>
-      <p class="hero-note">Registration for 2026&ndash;27 is open. The form opens in a new tab.</p>
+      <p class="hero-note rise" style="--d:.55s">Registration for 2026&ndash;27 is open. The form opens in a new tab.</p>
 
-      <dl class="facts" aria-label="Peer Coaching at a glance">
-        <div><dt>Subjects</dt><dd>9</dd></div>
-        <div><dt>Coaches</dt><dd>12</dd></div>
-        <div><dt>Sessions each week</dt><dd>5 slots</dd></div>
+      <dl class="facts rise" style="--d:.7s" aria-label="Peer Coaching at a glance">
+        <div><dt>Subjects</dt><dd><span data-count="9">9</span></dd></div>
+        <div><dt>Coaches</dt><dd><span data-count="12">12</span></dd></div>
+        <div><dt>Sessions each week</dt><dd><span data-count="5">5</span><span class="unit">slots</span></dd></div>
         <div><dt>Open to</dt><dd>Grades 9&ndash;11</dd></div>
       </dl>
     </div>
+
+    <svg class="hero-curve" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,96 L0,56 C240,8 480,8 720,40 C960,72 1200,80 1440,32 L1440,96 Z"/>
+    </svg>
   </section>
 
   <!-- WHY -->
-  <section id="why" class="section" aria-labelledby="why-h">
+  <section id="why" class="section band band--pale" aria-labelledby="why-h">
     <div class="wrap">
       <div class="section-head">
         <h2 id="why-h">Why Peer Coaching works</h2>
@@ -100,7 +111,7 @@
   </section>
 
   <!-- HOW IT WORKS -->
-  <section id="how" class="section section--tint" aria-labelledby="how-h">
+  <section id="how" class="section band band--deep" aria-labelledby="how-h">
     <div class="wrap">
       <div class="section-head">
         <h2 id="how-h">How a session works</h2>
@@ -196,7 +207,7 @@
   </section>
 
   <!-- RESOURCES (teaser; full library lives on resources.html) -->
-  <section id="resources" class="section" aria-labelledby="res-h">
+  <section id="resources" class="section band band--pale" aria-labelledby="res-h">
     <div class="wrap split split--center">
       <div>
         <h2 id="res-h">Revision resources, open to everyone</h2>
@@ -209,7 +220,7 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="section section--tint" aria-labelledby="faq-h">
+  <section id="faq" class="section" aria-labelledby="faq-h">
     <div class="wrap wrap--narrow">
       <div class="section-head">
         <h2 id="faq-h">Questions parents ask</h2>
@@ -260,7 +271,7 @@
   </section>
 
   <!-- CONTACTS -->
-  <section id="contacts" class="section" aria-labelledby="con-h">
+  <section id="contacts" class="section section--tint" aria-labelledby="con-h">
     <div class="wrap">
       <div class="section-head">
         <h2 id="con-h">Contact us</h2>
@@ -309,5 +320,6 @@
 </footer>
 
 <script src="app.js" defer></script>
+<script src="home.js" defer></script>
 </body>
 </html>
