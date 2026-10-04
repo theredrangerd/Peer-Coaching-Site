@@ -1,8 +1,7 @@
-/* Library mockup — vanilla JS.
-   1. Sidebar drawer toggle (mobile).
+/* Revision resources page — vanilla JS.
+   1. "On this page" sidebar drawer toggle (mobile).
    2. Scroll-spy: mark the sidebar link for the section in view.
-   3. FAQ text filter.
-   Native <details> handles expand/collapse. */
+   3. Table row filter. */
 
 (function () {
   "use strict";
@@ -50,37 +49,43 @@
     map.forEach(function (m) { io.observe(m.el); });
   }
 
-  /* --- FAQ filter --- */
-  var input = document.getElementById("faq-filter");
-  var listEl = document.getElementById("faq-list");
-  var countEl = document.getElementById("faq-count");
-  if (input && listEl) {
-    var items = Array.prototype.slice.call(listEl.querySelectorAll("details"));
-    var total = items.length;
+  /* --- table filter: hides non-matching rows across every [data-filterable] table --- */
+  var input = document.getElementById("res-filter");
+  var countEl = document.getElementById("res-count");
+  var tables = Array.prototype.slice.call(document.querySelectorAll("table[data-filterable]"));
+  if (input && tables.length) {
+    var rows = [];
+    tables.forEach(function (t) {
+      Array.prototype.forEach.call(t.tBodies[0].rows, function (r) { rows.push({ table: t, row: r }); });
+    });
+    var total = rows.length;
 
     var render = function () {
       var q = input.value.trim().toLowerCase();
       var shown = 0;
-      items.forEach(function (d) {
-        var match = q === "" || d.textContent.toLowerCase().indexOf(q) !== -1;
-        d.hidden = !match;
-        if (match) shown++;
+      var perTable = new Map();
+      rows.forEach(function (x) {
+        var match = q === "" || x.row.textContent.toLowerCase().indexOf(q) !== -1;
+        x.row.hidden = !match;
+        if (match) { shown++; perTable.set(x.table, (perTable.get(x.table) || 0) + 1); }
       });
-      var empty = listEl.querySelector(".faq-empty");
-      if (shown === 0) {
-        if (!empty) {
-          empty = document.createElement("p");
-          empty.className = "faq-empty";
-          empty.textContent = "No questions match that. Try a different word, or contact a coordinator.";
-          listEl.appendChild(empty);
+      tables.forEach(function (t) {
+        var wrap = t.closest(".table-scroll");
+        var empty = wrap.nextElementSibling && wrap.nextElementSibling.classList.contains("filter-empty")
+          ? wrap.nextElementSibling : null;
+        if (q !== "" && !perTable.get(t)) {
+          if (!empty) {
+            empty = document.createElement("p");
+            empty.className = "filter-empty";
+            empty.textContent = "Nothing in this table matches.";
+            wrap.after(empty);
+          }
+        } else if (empty) {
+          empty.remove();
         }
-      } else if (empty) {
-        empty.remove();
-      }
+      });
       if (countEl) {
-        countEl.textContent = q === ""
-          ? total + " questions"
-          : shown + " of " + total + " shown";
+        countEl.textContent = q === "" ? "" : shown + " of " + total + " rows shown";
       }
     };
 

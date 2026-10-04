@@ -17,9 +17,14 @@ Last updated: 2026-09-03
 want to improve their grades and study habits. It is run by student **coordinators**
 with staff oversight from the **Head of Learning ([EA])**.
 
-`[CONFIRMED]` Private tutoring in Singapore is expensive and widespread. Peer
-Coaching is a free, school-based alternative. Widening access to good academic
-support is the programme's core purpose.
+`[CONFIRMED, REFRAMED 2026-10-04]` Private tutoring in Singapore is widespread, and
+many UWCSEA families can afford it — so the site does **not** lead with "free
+alternative for those who can't afford tuition". The pitch is that peer coaches
+are students **taking the same courses as their coachees, at the same time, and
+excelling in them**, so they can bring a coachee up to speed. It is a legitimate
+alternative to commercial tutoring that also happens to be free and cheaper;
+cost is a supporting point, not the headline. (The earlier draft of this section
+named affordability as the core purpose; superseded by the owner's direction.)
 
 **Problem the site solves:** today there is no single place for students to
 understand the programme, see when sessions run, find a tutor, sign up, or reach
@@ -122,7 +127,8 @@ Programme-wide schedule of when peer coaching sessions run.
 ### 7.2 Introduction to Peer Coaching `[CONFIRMED, content OPEN]`
 Explains the programme and its ethos.
 - `[OPEN]` Copy to be written with coordinators. Should carry the
-  access/affordability mission and a plain "how it works" explanation.
+  "same courses, same time, ahead of the curve" pitch (affordability only as a
+  supporting point) and a plain "how it works" explanation.
 
 ### 7.3 Subjects offered `[CONFIRMED, content OPEN]`
 List of subjects with peer coaching available.
