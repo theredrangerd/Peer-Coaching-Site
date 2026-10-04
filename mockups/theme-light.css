@@ -110,3 +110,7 @@
 /* solid (scrolled) header in light mode: chips need a tinted fill, not white */
 [data-theme="light"] .home .site-header.is-solid .mainnav a:hover,
 [data-theme="light"] .home .site-header.is-solid .mainnav a[aria-current="true"] { background: var(--primary-weak); }
+
+/* feedback cards on the light mint band: white cards with a border */
+[data-theme="light"] .feedback-card { background: #fff; border: 1px solid var(--border-strong); box-shadow: var(--shadow); }
+[data-theme="light"] .band--deep .feedback-card h3 { color: var(--text); }
