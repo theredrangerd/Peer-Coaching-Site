@@ -118,7 +118,21 @@
 .band--deep h2, .band--deep h3 { color: #fff; }
 .band--deep .steps li { border-top-color: var(--uwc-mint); }
 .band--deep .step-num { color: var(--uwc-mint); }
-.band--deep .steps p { color: #d6ebe9; }
+.band--deep .steps p,
+.band--deep .section-sub { color: #d6ebe9; }
+
+/* choice cards under the steps: the "two options" moment */
+.paths { display: grid; gap: var(--space-4); margin-top: var(--space-8); }
+@media (min-width: 760px) { .paths { grid-template-columns: 1fr 1fr; gap: var(--space-5); } }
+.path {
+  padding: var(--space-6);
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: var(--radius-lg);
+}
+.path-label { font-size: var(--step--1); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--uwc-mint); }
+.path h3 { font-size: var(--step-2); font-weight: 500; margin-top: var(--space-2); }
+.path p:last-child { color: #d6ebe9; margin-top: var(--space-3); max-width: 46ch; }
 
 /* --- motion ------------------------------------------------------------ */
 .js .rise { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
