@@ -47,7 +47,7 @@ mockup: complex data viz, 3D, heavy cross-page component reuse.
 ```
 mockups/
   index.html          <- landing / chooser page; also the GitHub Pages site root
-  content.md          <- shared placeholder copy; all three pull wording from here
+  (content pack moved to docs/content-pack.md so it is never published)
   shared/
     tokens.css        <- from docs/design-system.md; byte-identical in all three
     reset.css         <- minimal modern reset, shared

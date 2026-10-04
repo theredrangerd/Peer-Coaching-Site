@@ -10,3 +10,7 @@ desktop.ini
 node_modules/
 dist/
 .cache/
+
+# Source docs from coordinators: contain student names, class codes and emails.
+# Must never be committed to this public repo (see AGENTS.md privacy rule).
+peer-coaching-resources/

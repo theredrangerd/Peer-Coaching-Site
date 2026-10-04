@@ -8,11 +8,14 @@ Antigravity, Cursor, etc.). Keep this file tool-agnostic. `CLAUDE.md` imports it
 A website that acts as the central hub for the **Peer Coaching** programme at
 **UWCSEA** (United World College of South East Asia, Singapore).
 
-Peer Coaching pairs high-performing students with peers who want to raise their
-grades and learn better habits. It is a **free** alternative to Singapore's
-expensive private-tuition market — that affordability-and-access mission is the
-emotional core of the programme and should come through in the marketing surfaces
-of the site.
+Peer Coaching pairs students who are excelling in a subject with peers who
+want to be brought up to speed. The coaches are **taking the same courses as
+their coachees, at the same time**, and are ahead of the curve. That is the
+main selling point and the core of the pitch. It is a legitimate alternative to
+commercial tutoring (UWCSEA families can generally afford that, so do **not**
+frame it as a "free alternative for those who can't afford tuition"). It
+happens to be free and cheaper; mention that, but as a supporting point, never
+the headline.
 
 The site serves three jobs at once:
 
@@ -29,19 +32,17 @@ The site serves three jobs at once:
 | The repo owner | Peer coach + the person building this site; assisting the coordinators |
 | Peer Coaching coordinators | Student leaders who run the programme; the client |
 | [EA] (Head of Learning) | Staff approver — signs off on the design direction |
-| Peer coaches | Provide tutor bios/photos and the revision resources |
+| Peer coaches | Provide the revision resources; their bios/photos go only on the separate internal site, never the public one |
 | Students | Primary audience — sign up, browse resources, check schedules |
 
 ## Current phase — READ THIS BEFORE BUILDING
 
-**We are at the design-approval stage, not the production build.**
-
-The immediate deliverable is **2–3 mockups of the site**, each with a *different
-structural layout and aesthetic*, all on the UWC palette. [EA] reviews
-them and picks a direction. Do **not** invest in a sophisticated, final,
-data-backed build yet — the mockups are meant to be fast and disposable.
-
-See `docs/mockup-briefs.md` for the three directions.
+**The Portal direction was chosen.** The site is now two static pages in
+`mockups/`: `index.html` (parent-first home) and `resources.html` (public,
+library-style revision resources). Work order: overhaul the portal, then the
+revision resources page. Still plain HTML/CSS/JS, no build step; the real
+(Phase 1) stack is undecided. The original three-mockup brief is in
+`docs/mockup-briefs.md` and git history.
 
 ## Hard constraints
 
@@ -50,12 +51,27 @@ See `docs/mockup-briefs.md` for the three directions.
   fills and graphics only (they fail text contrast on white). Tokens in
   `docs/design-system.md`.
 - **Accessibility:** target WCAG 2.1 AA (school audience, staff sign-off).
-- **Safeguarding / privacy:** this site involves photos, names, and contact
-  details of students who are minors. Never publish a real student's personal
-  contact info, photo, or full name without explicit confirmation it is cleared.
-  Use placeholder people in mockups. Singapore PDPA applies to any form data.
-- **Content in mockups:** realistic placeholder — real section names and
-  plausible copy, fake names/data.
+- **Safeguarding / privacy — NO STUDENT INFO ON THE PUBLIC SITE (decided
+  2026-10-04):** the site is publicly accessible and students are minors. It must
+  contain no student or coach **names**, **photos**, **bios**, **grades or
+  other achievements**, or quotes — placeholder/fake people included. Coach
+  profiles live on a separate internal site (Google Apps Script, school Google
+  Workspace); the public site links to it and explains why it is internal.
+  Show availability by subject, never by person. Contact details: role titles or
+  a shared programme email only. Singapore PDPA applies to any form data.
+  Revision resources are intended to be public; sign-up/feedback are Google
+  Forms (restricted).
+- **Audience and positioning:** the public home page is written for **parents**
+  and prospective students. A core goal is making Peer Coaching read as a
+  legitimate alternative to commercial tutoring. Never name a competitor.
+  Only use trust claims the owner has confirmed (see below); don't invent
+  statistics or processes.
+- **Confirmed facts:** see `docs/programme-facts.md` (sanitised from the
+  coordinators' 2026-27 handout) — the source of truth for what the site may
+  claim. `peer-coaching-resources/` holds the raw handout, which names students
+  and lists their emails: it is gitignored; never commit or copy from it
+  names, class codes or emails.
+- **Content in mockups:** realistic placeholder copy, no invented people.
 
 ## Where things live
 

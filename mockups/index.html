@@ -3,268 +3,312 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Peer Coaching Hub — three directions</title>
-<meta name="description" content="Design review: the Peer Coaching Hub website shown three different ways. Same content and colours, three different structures.">
+<title>Peer Coaching Hub — UWCSEA</title>
+<meta name="description" content="Peer Coaching at UWCSEA: small, focused sessions with students who recently excelled in the same courses. Open to Grades 9 to 11. Supported by the Head of Learning.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared/tokens.css">
 <link rel="stylesheet" href="shared/reset.css">
 <link rel="stylesheet" href="shared/a11y.css">
-<style>
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-size: 1.0625rem;
-    background:
-      radial-gradient(60rem 30rem at 100% -10%, rgba(10,209,200,.10), transparent 60%),
-      radial-gradient(50rem 28rem at -10% 10%, rgba(69,223,177,.10), transparent 55%),
-      var(--bg);
-  }
-  .wrap { width: 100%; max-width: var(--measure-wide); margin-inline: auto; padding-inline: var(--space-4); }
-  @media (min-width: 768px) { .wrap { padding-inline: var(--space-6); } }
-
-  header.site {
-    padding-block: var(--space-5);
-    border-bottom: 1px solid var(--border);
-  }
-  .wordmark {
-    display: inline-flex; align-items: center; gap: var(--space-2);
-    font-weight: 700; color: var(--text); text-decoration: none;
-    font-size: var(--step-1);
-  }
-  .wordmark .dot {
-    width: 14px; height: 14px; border-radius: var(--radius-full);
-    background: linear-gradient(135deg, var(--uwc-cyan), var(--uwc-mint));
-  }
-
-  main { flex: 1; padding-block: var(--space-8) var(--space-9); }
-
-  .lede { max-width: 46rem; }
-  .kicker {
-    text-transform: uppercase; letter-spacing: .08em; font-size: var(--step--1);
-    font-weight: 600; color: var(--primary); margin-bottom: var(--space-3);
-  }
-  h1 { font-size: var(--step-4); margin-bottom: var(--space-4); }
-  @media (min-width: 768px) { h1 { font-size: var(--step-5); } }
-  .lede p { color: var(--text-muted); font-size: var(--step-1); }
-
-  .ask {
-    margin-top: var(--space-6);
-    padding: var(--space-4) var(--space-5);
-    background: var(--bg-subtle);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--primary);
-    border-radius: var(--radius);
-    max-width: 46rem;
-  }
-  .ask strong { color: var(--text); }
-
-  .note {
-    margin-top: var(--space-7);
-    max-width: 46rem;
-    padding-left: var(--space-5);
-    border-left: 3px solid var(--accent-mint);
-  }
-  .note-head {
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: var(--space-2);
-  }
-  .note p + p { margin-top: var(--space-3); }
-  .note p:not(.note-head) { color: var(--text-muted); }
-  .note .sign { margin-top: var(--space-3); font-style: normal; color: var(--text); }
-
-  .cards {
-    margin-top: var(--space-8);
-    display: grid; gap: var(--space-5);
-    grid-template-columns: 1fr;
-  }
-  @media (min-width: 768px) { .cards { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
-
-  .card {
-    display: flex; flex-direction: column;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: var(--space-6);
-    box-shadow: var(--shadow-sm);
-  }
-  .card .num {
-    font-size: var(--step--1); font-weight: 600; color: var(--text-muted);
-    letter-spacing: .06em;
-  }
-  .card h2 { font-size: var(--step-2); margin: var(--space-2) 0 var(--space-3); }
-  .card .best {
-    font-size: var(--step--1); font-weight: 600; text-transform: uppercase;
-    letter-spacing: .06em; color: var(--primary); margin-bottom: var(--space-2);
-  }
-  .card p { color: var(--text-muted); flex: 1; }
-  .card .cta {
-    margin-top: var(--space-5);
-    display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
-    padding: var(--space-3) var(--space-5);
-    background: var(--primary); color: var(--text-on-fill);
-    text-decoration: none; font-weight: 600;
-    border-radius: var(--radius);
-    transition: background .15s ease;
-  }
-  .card .cta:hover { background: var(--primary-hover); color: var(--text-on-fill); }
-  .card .swatch { height: 6px; border-radius: var(--radius-full); margin-bottom: var(--space-5); }
-  .s-portal    { background: linear-gradient(90deg, var(--uwc-teal-deep), var(--uwc-cyan)); }
-  .s-editorial { background: linear-gradient(90deg, var(--uwc-teal), var(--uwc-mint)); }
-  .s-library   { background: linear-gradient(90deg, var(--uwc-teal-deep), var(--uwc-pale)); }
-
-  .compare { margin-top: var(--space-9); max-width: var(--measure-wide); }
-  .compare h2 { font-size: var(--step-2); margin-bottom: var(--space-4); }
-  .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
-  table.cmp { min-width: 640px; font-size: var(--step-0); }
-  table.cmp th, table.cmp td {
-    text-align: left; padding: var(--space-3) var(--space-4);
-    border-bottom: 1px solid var(--border);
-  }
-  table.cmp thead th { background: var(--bg-subtle); color: var(--text); font-weight: 600; }
-  table.cmp tbody th { font-weight: 500; color: var(--text-muted); }
-  table.cmp tr:last-child td, table.cmp tr:last-child th { border-bottom: 0; }
-
-  footer.site {
-    border-top: 1px solid var(--border);
-    padding-block: var(--space-6);
-    color: var(--text-muted);
-    font-size: var(--step--1);
-  }
-  footer.site p { max-width: var(--measure); }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site">
-  <div class="wrap">
-    <a class="wordmark" href="./"><span class="dot" aria-hidden="true"></span>Peer Coaching Hub</a>
+<header class="site-header" id="top">
+  <div class="bar">
+    <a class="wordmark" href="#top">
+      <span class="mark" aria-hidden="true"></span>
+      Peer Coaching&nbsp;Hub
+    </a>
+    <nav class="mainnav" aria-label="Sections">
+      <button class="nav-toggle tap" aria-expanded="false" aria-controls="navlist">
+        <span class="sr-only">Menu</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+      <ul id="navlist" role="list">
+        <li><a href="#why">Why Peer Coaching</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#sessions">Sessions</a></li>
+        <li><a href="#coaches">Coaches</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="resources.html">Revision resources</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary header-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSf1Z1Iq5IEXSOcfdVRDhCTiiGeBbZqanfJGEhni4e6G5SWXrQ/viewform?usp=dialog" target="_blank" rel="noopener">Sign up</a>
   </div>
 </header>
 
 <main id="main">
-  <div class="wrap">
-    <div class="lede">
-      <p class="kicker">Design review · Phase 0</p>
-      <h1>One website, three directions</h1>
-      <p>
-        This is the Peer Coaching Hub shown three different ways. The colours, the
-        content and the programme are the same in all three — what changes is how
-        the site is <strong>structured</strong> and how it <strong>feels</strong>
-        to move around. Open each one, click through it, then use
-        &ldquo;Back to overview&rdquo; to return here.
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap">
+      <h1 id="hero-h">Get up to speed with students who recently excelled in your courses.</h1>
+      <p class="hero-sub">
+        Peer coaches are UWCSEA students who studied the same courses a year or
+        two ago, did exceptionally well, and remember exactly which parts were
+        hard. In small, focused sessions they help you with whatever you are
+        stuck on. Supported by the Head of Learning.
       </p>
-    </div>
-
-    <div class="ask">
-      <strong>What we&rsquo;re asking:</strong> which structure fits the programme
-      best? Not which page looks most finished — these are quick mockups with
-      placeholder text and invented people. No real student data.
-    </div>
-
-    <div class="note">
-      <p class="note-head">Where this is at — a note from the owner</p>
-      <p>
-        These three mockups are the whole of Phase 0, and there&rsquo;s really
-        only one decision they&rsquo;re built to unlock: <strong>which structure
-        &mdash; Portal, Editorial or Library &mdash; should the Peer Coaching Hub
-        be built on?</strong> The content and the palette are settled; the layout
-        is not. Once a direction is picked, the next step is one proper build on
-        that shape, with real tutor bios and the live timetable.
-      </p>
-      <p>
-        To address the data question directly: the finished site will not
-        harvest data, store any student information, or carry advertising. There
-        is no backend and no database, no analytics and no third-party tracking,
-        and sign-ups hand off to the school&rsquo;s own forms rather than
-        collecting anything here. I build and run the entire site myself, so
-        I can say that with certainty and keep it that way.
-      </p>
-      <p class="sign">&mdash; the owner</p>
-    </div>
-
-    <div class="cards">
-      <article class="card">
-        <div class="swatch s-portal" aria-hidden="true"></div>
-        <span class="num">01</span>
-        <h2>Portal</h2>
-        <p class="best">Best for coordination</p>
-        <p>
-          Everything on one screen — notices, timetable, who&rsquo;s free this
-          week, sign-up links. Built for students who check the site often and
-          want answers fast.
-        </p>
-        <a class="cta" href="01-portal/index.html">Open Portal <span aria-hidden="true">&rarr;</span></a>
-      </article>
-
-      <article class="card">
-        <div class="swatch s-editorial" aria-hidden="true"></div>
-        <span class="num">02</span>
-        <h2>Editorial</h2>
-        <p class="best">Best for explaining the programme</p>
-        <p>
-          Leads with the story — free, student-to-student, access for everyone.
-          A few clean pages that build trust with new students, staff and
-          parents, then link to the practical stuff.
-        </p>
-        <a class="cta" href="02-editorial/index.html">Open Editorial <span aria-hidden="true">&rarr;</span></a>
-      </article>
-
-      <article class="card">
-        <div class="swatch s-library" aria-hidden="true"></div>
-        <span class="num">03</span>
-        <h2>Library</h2>
-        <p class="best">Best for growing resources</p>
-        <p>
-          A browsable reference with a permanent sidebar. The revision resources —
-          past papers, channel picks, learning with AI — get room to grow, with a
-          long searchable FAQ.
-        </p>
-        <a class="cta" href="03-library/index.html">Open Library <span aria-hidden="true">&rarr;</span></a>
-      </article>
-    </div>
-
-    <section class="compare">
-      <h2>How they compare</h2>
-      <div class="table-scroll">
-        <table class="cmp">
-          <thead>
-            <tr>
-              <th scope="col">&nbsp;</th>
-              <th scope="col">Portal</th>
-              <th scope="col">Editorial</th>
-              <th scope="col">Library</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">Main job it does best</th><td>Coordination</td><td>Marketing &amp; sign-ups</td><td>Resources &amp; reference</td></tr>
-            <tr><th scope="row">First-time visitor clarity</th><td>Medium</td><td>High</td><td>Medium</td></tr>
-            <tr><th scope="row">Speed for returning students</th><td>High</td><td>Low–Medium</td><td>Medium</td></tr>
-            <tr><th scope="row">Programme story &amp; mission</th><td>Low</td><td>High</td><td>Low–Medium</td></tr>
-            <tr><th scope="row">Pages to keep updated</th><td>Fewest</td><td>Most</td><td>Medium</td></tr>
-            <tr><th scope="row">Mobile complexity</th><td>Low</td><td>Low</td><td>Medium (sidebar)</td></tr>
-            <tr><th scope="row">Credibility with staff &amp; parents</th><td>Medium</td><td>High</td><td>Medium</td></tr>
-          </tbody>
-        </table>
+      <div class="hero-actions" id="signup">
+        <a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSf1Z1Iq5IEXSOcfdVRDhCTiiGeBbZqanfJGEhni4e6G5SWXrQ/viewform?usp=dialog" target="_blank" rel="noopener">Sign up for coaching</a>
+        <a class="btn btn-ghost btn-lg" href="resources.html">Browse revision resources</a>
       </div>
-    </section>
-  </div>
+      <p class="hero-note">Registration for 2026&ndash;27 is open. The form opens in a new tab.</p>
+
+      <dl class="facts" aria-label="Peer Coaching at a glance">
+        <div><dt>Subjects</dt><dd>9</dd></div>
+        <div><dt>Coaches</dt><dd>12</dd></div>
+        <div><dt>Sessions each week</dt><dd>5 slots</dd></div>
+        <div><dt>Open to</dt><dd>Grades 9&ndash;11</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" class="section" aria-labelledby="why-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="why-h">Why Peer Coaching works</h2>
+        <p class="section-sub">Peer Coaching is run by students, for students, on a simple idea: everyone deserves to learn in a setting that is approachable and tailored to them. Your coach isn&rsquo;t an outside expert. They are a student who was recently exactly where you are.</p>
+      </div>
+      <div class="why-list">
+        <div class="why-row">
+          <h3>They have just been where you are</h3>
+          <p>A coach who took your course last year knows which questions the examiners actually ask, which topics look harder than they are, and which look easier.</p>
+        </div>
+        <div class="why-row">
+          <h3>Among the best in their subject</h3>
+          <p>Coaches are among the strongest students in the subject they coach, so they can explain a topic clearly and show you how they approach it.</p>
+        </div>
+        <div class="why-row">
+          <h3>Built around what you&rsquo;re stuck on</h3>
+          <p>You choose the subject and set the pace. Nobody moves on because the rest of the class has. Bring a question you couldn&rsquo;t finish, a topic that didn&rsquo;t land, or a past paper.</p>
+        </div>
+        <div class="why-row">
+          <h3>Questions are easier to ask</h3>
+          <p>Sessions are small. You may be the only student, or be joined by up to three others, which is very different from asking in front of a class of twenty-five.</p>
+        </div>
+        <div class="why-row">
+          <h3>A small commitment, and free</h3>
+          <p>A half-hour slot at 12:45 costs a lunch break, not an evening. Peer Coaching also costs nothing, and works alongside any other support you have.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section section--tint" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="how-h">How a session works</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Sign up</h3>
+          <p>Choose the subject and slot you want, in advance. Sessions are matched by subject, not assigned at random.</p>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Come prepared</h3>
+          <p>Bring something specific: an unfinished question, a topic that didn&rsquo;t land, or a past paper to work through.</p>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Work through it</h3>
+          <p>Your coach works alongside you and supports your thinking.</p>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">4</span>
+          <h3>Finish with an exit ticket</h3>
+          <p>A short wrap-up to capture what you covered and where you are.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SESSIONS: slots + subjects -->
+  <section id="sessions" class="section" aria-labelledby="ses-h">
+    <div class="wrap split">
+      <div>
+        <h2 id="ses-h">Five slots a week</h2>
+        <p class="section-sub">Choose the sessions that fit your timetable.</p>
+        <ul class="slots" role="list">
+          <li><span class="slot-time">7:30&ndash;8:00 am</span><span class="slot-label">Before school</span></li>
+          <li><span class="slot-time">12:45&ndash;1:15 pm</span><span class="slot-label">Lunch</span></li>
+          <li><span class="slot-time">1:15&ndash;1:45 pm</span><span class="slot-label">Lunch</span></li>
+          <li><span class="slot-time">3:00&ndash;4:00 pm</span><span class="slot-label">After school</span></li>
+          <li><span class="slot-time">4:00&ndash;5:00 pm</span><span class="slot-label">After school</span></li>
+        </ul>
+      </div>
+      <div id="subjects">
+        <h2>Nine subjects</h2>
+        <p class="section-sub">Students in Grades 9, 10 and 11 can sign up for as many or as few as they like.</p>
+        <ul class="chips" role="list">
+          <li>Mathematics</li><li>Physics</li><li>Chemistry</li>
+          <li>Biology</li><li>Economics</li><li>English</li>
+          <li>History</li><li>Geography</li><li>Art</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COACHES -->
+  <section id="coaches" class="section section--tint" aria-labelledby="co-h">
+    <div class="wrap split">
+      <div>
+        <h2 id="co-h">Our coaches</h2>
+        <p class="section-sub">There are 12 peer coaches, each among the strongest students at UWCSEA in their subject. Their profiles are on a separate site for the school community.</p>
+        <p class="coach-cta">
+          <a class="btn btn-primary" href="#">Open the coach profiles</a>
+        </p>
+        <p class="hero-note">Requires a school Google account.</p>
+      </div>
+      <div class="aside-card">
+        <h3>Why you won&rsquo;t find names here</h3>
+        <p>Our coaches are students, and many are minors. This page is open to anyone on the internet, so we don&rsquo;t publish their names, photos or results here. Families and students in the school community can read the coach profiles on the internal site instead.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust" aria-labelledby="trust-h">
+    <div class="wrap">
+      <h2 id="trust-h">What you can rely on</h2>
+      <div class="trust-grid">
+        <div>
+          <h3>Supported by the school</h3>
+          <p>Peer Coaching is supported by the Head of Learning.</p>
+        </div>
+        <div>
+          <h3>Confidential, with one exception</h3>
+          <p>What is said in a session stays there, and nothing is reported to teachers as a judgement on your ability. If something raises a concern about a student&rsquo;s wellbeing or safety, coaches pass it to a member of staff. Every coach is briefed on this.</p>
+        </div>
+        <div>
+          <h3>Academic honesty</h3>
+          <p>Coaches support learning. They do not complete assessed work for anyone, and coaching stops at the line where academic honesty begins.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES (teaser; full library lives on resources.html) -->
+  <section id="resources" class="section" aria-labelledby="res-h">
+    <div class="wrap split split--center">
+      <div>
+        <h2 id="res-h">Revision resources, open to everyone</h2>
+        <p class="section-sub">Whether or not you sign up, the coaches&rsquo; recommended past papers, video channels and guidance on learning with AI are there for anyone to use.</p>
+      </div>
+      <div>
+        <a class="btn btn-primary btn-lg" href="resources.html">Open revision resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section--tint" aria-labelledby="faq-h">
+    <div class="wrap wrap--narrow">
+      <div class="section-head">
+        <h2 id="faq-h">Questions parents ask</h2>
+      </div>
+      <div class="accordion">
+        <details>
+          <summary>How is this different from private tuition?</summary>
+          <div class="acc-body"><p>Your coach is a UWCSEA student who recently took the same course and excelled in it. They remember which parts were hard and what the examiners ask, and sessions are built around the specific thing you are stuck on. Many families use Peer Coaching alongside other support.</p></div>
+        </details>
+        <details>
+          <summary>Who can sign up?</summary>
+          <div class="acc-body"><p>Students in Grades 9, 10 and 11, in as many or as few subjects as they like.</p></div>
+        </details>
+        <details>
+          <summary>Who are the coaches?</summary>
+          <div class="acc-body"><p>UWCSEA students who are among the best in their subject. We don&rsquo;t publish their names or details on this public site; profiles are on an internal site for the school community.</p></div>
+        </details>
+        <details>
+          <summary>When do sessions run?</summary>
+          <div class="acc-body"><p>There are five slots each week: 7:30&ndash;8:00 am before school, 12:45&ndash;1:15 pm and 1:15&ndash;1:45 pm at lunch, and 3:00&ndash;4:00 pm and 4:00&ndash;5:00 pm after school. Choose the ones that fit your timetable.</p></div>
+        </details>
+        <details>
+          <summary>How big are sessions?</summary>
+          <div class="acc-body"><p>Small. You may be the only student in a session, or be joined by up to three others.</p></div>
+        </details>
+        <details>
+          <summary>Is it confidential?</summary>
+          <div class="acc-body"><p>Yes. What is said in a session stays there, and nothing is reported to teachers as a judgement on your ability. The one exception is a concern about a student&rsquo;s wellbeing or safety, which coaches pass to a member of staff. Every coach is briefed on this.</p></div>
+        </details>
+        <details>
+          <summary>What is expected of students?</summary>
+          <div class="acc-body"><p>If you sign up for a slot, turn up, or cancel in advance so your coach isn&rsquo;t left waiting. Coaches support your learning but never complete assessed work for you.</p></div>
+        </details>
+        <details>
+          <summary>How do we sign up?</summary>
+          <div class="acc-body"><p>Use the sign-up form linked at the top of this page. Choose the subjects you want and the slots that fit your timetable.</p></div>
+        </details>
+        <details>
+          <summary>What if it isn&rsquo;t working out?</summary>
+          <div class="acc-body"><p>Feedback runs both ways. Students give feedback on sessions and coaches record how they went, and the coordinators use both to resolve any friction.</p></div>
+        </details>
+        <details>
+          <summary>Does it cost anything?</summary>
+          <div class="acc-body"><p>No. Peer Coaching is free.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts" class="section" aria-labelledby="con-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="con-h">Contact us</h2>
+        <p class="section-sub"><span class="pill pill--sample">Placeholder</span> The shared programme address is still to be confirmed.</p>
+      </div>
+      <ul class="contact-grid" role="list">
+        <li class="contact-card">
+          <p class="contact-role">Programme email</p>
+          <p class="contact-detail">peercoaching@example.uwcsea.edu.sg</p>
+          <p class="contact-note">Questions about the programme and sign-up help.</p>
+        </li>
+        <li class="contact-card">
+          <p class="contact-role">Student coordinators</p>
+          <p class="contact-detail">Via the programme email</p>
+          <p class="contact-note">Run the programme and resolve any friction.</p>
+        </li>
+        <li class="contact-card">
+          <p class="contact-role">Staff lead</p>
+          <p class="contact-detail">Head of Learning&rsquo;s office, via the school</p>
+          <p class="contact-note">Programme oversight.</p>
+        </li>
+      </ul>
+      <p class="feedback-line">
+        Had a session? <a class="inline-link" href="#">Tell us how it went</a>
+      </p>
+    </div>
+  </section>
+
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <p>
-      Built for the Peer Coaching coordinators, for design review by the Head of
-      Learning. Placeholder content throughout — invented tutors, sample
-      timetable, no real student names, photos or contact details. UWCSEA palette;
-      working title &ldquo;Peer Coaching Hub&rdquo; pending an official name and logo.
-    </p>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="wordmark wordmark--foot" href="#top"><span class="mark" aria-hidden="true"></span> Peer Coaching Hub</a>
+      <p class="foot-note">Peer coaching at UWCSEA, run by students and supported by the Head of Learning. This public site does not publish student names, photos or results.</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul role="list" class="foot-links">
+        <li><a href="#why">Why Peer Coaching</a></li>
+        <li><a href="#how">How a session works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="resources.html">Revision resources</a></li>
+      </ul>
+    </nav>
   </div>
 </footer>
 
+<script src="app.js" defer></script>
 </body>
 </html>
