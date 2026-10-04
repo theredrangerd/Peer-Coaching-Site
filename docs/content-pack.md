@@ -1,9 +1,10 @@
 # Placeholder content pack — Phase 0 mockups
 
-**Everything here is fake.** Real section names + plausible copy, invented
-people and data. No real UWCSEA student photos, names, or contact details
-(safeguarding — see `docs/open-questions.md` #6). All three mockups pull their
-copy from this file so wording doesn't drift between them.
+**Mostly placeholder.** Real section names + plausible copy. Lives in `docs/`
+(not `mockups/`) so it is never published. No student or coach names, photos or
+achievements anywhere on the public site — see the privacy rule in `AGENTS.md`.
+The wording in `mockups/` has since moved on from this pack; where they differ,
+the pages are newer.
 
 Anything a coordinator still needs to supply is marked `[TBC]`.
 
@@ -42,7 +43,7 @@ the Head of Learning · placeholder content, no real student data.
 
 ## Hero (marketing surfaces)
 
-**Headline:** Free tutoring, student to student.
+**Headline (superseded — see `mockups/index.html`):** Free tutoring, student to student.
 
 **Sub:** Peer Coaching pairs UWCSEA students who are strong in a subject with
 students who want to lift their grades and build better study habits — at no
@@ -100,38 +101,19 @@ Spanish, French)
 
 ---
 
-## Tutor availability  `[TBC — sample]`
+## Tutor availability and Meet the tutors  `[REMOVED from the public site]`
 
-Grid: coach name (rows) × weekday (columns). A filled cell = that coach has a
-free slot students can book that day. Sample pattern:
+**Public-site privacy rule (decided 2026-10-04):** no student or coach names,
+photos, bios, grades or quotes appear on the public site — placeholder names
+included. The coach profiles move to a separate internal site (Google Apps
+Script, school Google Workspace). The public site links to it and explains why.
+Availability is not shown per person; meetings are flexible and negotiated
+one-to-one between coach and coachee, so there is no public timetable either.
 
-| Coach | Mon | Tue | Wed | Thu | Fri |
-| --- | --- | --- | --- | --- | --- |
-| Aisha R. | ● | | | ● | ● |
-| Daniel K. | | ● | | ● | |
-| Mei-Lin T. | ● | | ● | | ● |
-| Sofia G. | | ● | | ● | ● |
-| Arjun P. | ● | | ● | | |
-| Noah B. | | ● | ● | | ● |
-| Hannah W. | ● | | | ● | |
-| Yusuf A. | | ● | | | ● |
-
----
-
-## Meet the tutors  `[TBC — real roster + consent needed]`
-
-Placeholder coaches. Avatars are coloured monogram tiles, not photos.
-
-| Name | Grade | Subjects | Bio | Interests | Specialty |
-| --- | --- | --- | --- | --- | --- |
-| Aisha R. | Grade 12 | Maths, Physics | "I went from a 5 to a 7 in HL Maths by changing how I revised, not how long." | Robotics, football, film photography | Exam technique |
-| Daniel K. | Grade 12 | Chemistry, Biology | "Sciences click when you stop memorising and start asking why." | Climbing, cooking, chess | Building intuition |
-| Mei-Lin T. | Grade 11 | Economics, Maths | "Past papers are the whole game. I'll show you how to use them properly." | Debate, piano, running | Past-paper drills |
-| Sofia G. | Grade 12 | English Lit, History | "Essay structure is a skill you can learn in a week, not a talent." | Theatre, journalism, hiking | Essay planning |
-| Arjun P. | Grade 11 | Computer Science, Maths | "We'll get you writing code you actually understand, line by line." | Game dev, basketball, electronic music | Coding fundamentals |
-| Noah B. | Grade 12 | Physics, Maths | "I like the hard questions — the ones worth the most marks." | Sailing, astronomy, guitar | Problem solving |
-| Hannah W. | Grade 11 | Biology, Chemistry | "Diagrams and flashcards that actually stick. I'll help you make them." | Netball, baking, volunteering | Revision systems |
-| Yusuf A. | Grade 12 | Geography, Economics | "Case studies are your evidence bank. Let's build yours." | Photography, cycling, cooking | Case studies |
+Confirmed public facts: 9 subjects · 12 coaches who are among the best in their
+subject · meetings one-to-one, flexible · free · supported by the Head of
+Learning. Everything else about coach selection, training and safeguarding
+process is still to be supplied (see `docs/open-questions.md`).
 
 ---
 
