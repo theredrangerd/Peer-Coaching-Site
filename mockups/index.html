@@ -7,7 +7,7 @@
 <meta name="description" content="Peer Coaching at UWCSEA: small, focused sessions with students who recently excelled in the same courses. Open to Grades 9 to 11. Supported by the Head of Learning.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Pinyon+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared/tokens.css">
 <link rel="stylesheet" href="shared/reset.css">
 <link rel="stylesheet" href="shared/a11y.css">
@@ -176,9 +176,9 @@ document.documentElement.classList.add("js");
         <h2>Nine subjects</h2>
         <p class="section-sub">Students in Grades 9, 10 and 11 can sign up for as many or as few as they like.</p>
         <ul class="chips" role="list">
-          <li>Mathematics</li><li>Physics</li><li>Chemistry</li>
-          <li>Biology</li><li>Economics</li><li>English</li>
-          <li>History</li><li>Geography</li><li>Art</li>
+          <li data-burst="math">Mathematics</li><li data-burst="phys">Physics</li><li data-burst="chem">Chemistry</li>
+          <li data-burst="bio">Biology</li><li data-burst="econ">Economics</li><li data-burst="eng">English</li>
+          <li data-burst="hist">History</li><li data-burst="geog">Geography</li><li data-burst="art">Art</li>
         </ul>
       </div>
     </div>
@@ -362,6 +362,13 @@ document.documentElement.classList.add("js");
 
 
 <script src="app.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3.9.1/tsparticles.slim.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/shape-text@3.9.1/tsparticles.shape.text.min.js" defer></script>
 <script src="home.js" defer></script>
+<script src="burst.js" defer></script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="pc-goo"><feGaussianBlur in="SourceGraphic" stdDeviation="6" result="b"/>
+    <feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9"/></filter>
+</svg>
 </body>
 </html>
