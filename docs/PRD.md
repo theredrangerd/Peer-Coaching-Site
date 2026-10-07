@@ -60,8 +60,7 @@ Confirm which of these the coordinators actually care about:
 ### Phase 0 — Design approval `[CONFIRMED]` ← we are here
 
 Produce **2–3 mockups**, each a different structural layout and aesthetic, all on
-the UWC palette, populated with realistic placeholder content. Present to [EA]
-[EA] for sign-off on direction. Fast and disposable — no backend, no CMS, no
+the UWC palette, populated with realistic placeholder content. Present to [EA] for sign-off on direction. Fast and disposable — no backend, no CMS, no
 build pipeline required. Directions are specified in `docs/mockup-briefs.md`.
 
 **Exit criteria:** [EA] picks a direction (or a blend), and open questions in

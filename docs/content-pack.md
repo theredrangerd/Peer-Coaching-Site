@@ -105,8 +105,9 @@ Spanish, French)
 
 **Public-site privacy rule (decided 2026-10-04):** no student or coach names,
 photos, bios, grades or quotes appear on the public site — placeholder names
-included. The coach profiles move to a separate internal site (Google Apps
-Script, school Google Workspace). The public site links to it and explains why.
+included. The coach profiles live in a Google Slides slideshow in the school's Google
+Drive (this replaced the earlier plan for an Apps Script internal site). The
+public site links to it and explains why.
 Availability is not shown per person; meetings are flexible and negotiated
 one-to-one between coach and coachee, so there is no public timetable either.
 

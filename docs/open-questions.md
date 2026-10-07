@@ -14,7 +14,7 @@ Format: `#` · question · who can answer · why it matters · status
 | 3 | Where is the site **hosted**, under what **domain/URL**? Does the school need to own it? | [EA] / school IT | Hosting choice, brand rules, SSO feasibility | OPEN |
 | 4 | Is the site **fully public**, or are parts gated behind school SSO? | [EA] | Auth, what data can be shown | OPEN |
 | 5 | Who **owns updates after handover** (current owner graduates)? | Coordinators / [EA] | How editable the build must be | OPEN |
-| 6 | **Safeguarding sign-off** — ~~which student data may be published?~~ **Decided 2026-10-04: none on the public site** (no names, photos, achievements). Still open: [EA] sign-off on the internal coach-profile site and on how the public site explains it | [EA] / teacher heads | Internal "Meet the coaches" site | PARTLY ANSWERED |
+| 6 | **Safeguarding sign-off** — ~~which student data may be published?~~ **Decided 2026-10-04: none on the public site** (no names, photos, achievements). Coach profiles are now a school-Drive slideshow (replaced the Apps Script site). Still open: [EA] sign-off on the slideshow and on how the public site explains it | [EA] / teacher heads | Coach-profiles slideshow | PARTLY ANSWERED |
 
 ## Content still needed
 
@@ -29,7 +29,7 @@ Format: `#` · question · who can answer · why it matters · status
 | 13 | **Learning with AI** guide — must align with UWCSEA academic-integrity / AI policy | Owner + [EA] | OPEN |
 | 14 | **Sign-up form** URL(s) — student, and "become a coach" | Coordinators | OPEN |
 | 15 | **Feedback form** URL | Coordinators | OPEN |
-| 16 | **Tutor roster** for the *internal* coach-profile site (Google Apps Script): names, photos, interests, specialties, with consent. Not for the public site | Coaches | OPEN |
+| 16 | **Tutor roster** for the internal coach-profiles slideshow (Google Slides): names, photos, interests, specialties, with consent. Not for the public site | Coaches | OPEN |
 | 17 | **Contacts** to publish — prefer a shared programme email / staff emails over student emails | Coordinators | OPEN |
 | 18 | Who **maintains revision resources** after launch, and how | Coordinators | OPEN |
 
@@ -45,7 +45,7 @@ Format: `#` · question · who can answer · why it matters · status
 
 | # | Question | Owner | Status |
 | --- | --- | --- | --- |
-| 22 | URL and access rules for the internal coach-profile site; who maintains it | Owner / school IT | OPEN |
+| 22 | Sharing/access settings for the coach-profiles slideshow (school-domain only?) and who maintains it | Owner / school IT | OPEN |
 | 23 | **Coach selection and training** (handout confirms coaches are briefed on the wellbeing exception; selection criteria and training still unstated): what is actually true (grade threshold? teacher recommendation? training session?). The public site only says coaches are "among the best in their subject" | Coordinators | OPEN |
 | 24 | **Safeguarding facts** parents will ask: where do sessions happen, is a member of staff present or nearby, how is sign-up data held (PDPA)? Handout answers confidentiality + the wellbeing/safety escalation to staff, which the site now states | [EA] / coordinators | OPEN |
 | 25 | **Staff endorsements**: names/roles of further staff to cite alongside the Head of Learning, with their agreement | Owner | OPEN |
