@@ -15,6 +15,7 @@ summary. Source of truth for what the site may claim.
   ago**" and remember what was hard ("took the same course **last year**").
 - 12 coaches who are strong and confident in their subject, not necessarily the top (owner feedback, 2026-10-07). Don't say "top" or "best".
 - Supported by [EA] (Head of Learning, whole school) and [DM] (Coordinator of English in High School) (owner, 2026-10-07). Named staff are fine on the public site; students are not.
+- Staff contact on the site is [EA] only. [DM] vouches for the programme but is not a contact (owner, 2026-10-07).
 
 ## Who and what
 - Open to **Grades 9, 10 and 11** as coachees; any number of subjects.

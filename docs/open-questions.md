@@ -55,6 +55,7 @@ Format: `#` · question · who can answer · why it matters · status
 
 | 29 | **Handout vs earlier statements:** handout says five fixed slots and sessions of up to four students, coaches took the course "a year or two ago"; owner earlier said one-to-one, fully flexible, same courses at the same time. Site follows the handout. | Owner | ANSWERED 2026-10-04: trust the handout on slots and session size; all coaches are Grade 11 (IB year 1), so G9/10 coachees get a coach who took the course earlier and G11 coachees a coach in the same course now |
 | 30 | Shared **programme email** to replace the coordinators' student emails in the handout (#17); the site shows a placeholder | Owner / coordinators | OPEN |
+| 31 | **Legal:** can student email addresses go on the public site, and whose addresses may we show? The Contact us section shows two placeholder coordinator emails until this is settled | Owner / school (legal, [EA]) |
 
 ## Answered
 
