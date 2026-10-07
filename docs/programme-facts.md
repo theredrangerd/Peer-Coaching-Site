@@ -13,8 +13,8 @@ summary. Source of truth for what the site may claim.
 - Sessions are small: the coachee brings a specific thing they are stuck on.
 - Coaches "sat the same papers and studied the same course **a year or two
   ago**" and remember what was hard ("took the same course **last year**").
-- 12 coaches, among the best in their subject (owner, 2026-10-04).
-- Supported by the Head of Learning (more named staff to come).
+- 12 coaches who are strong and confident in their subject, not necessarily the top (owner feedback, 2026-10-07). Don't say "top" or "best".
+- Supported by [EA] (Head of Learning, whole school) and [DM] (Coordinator of English in High School) (owner, 2026-10-07). Named staff are fine on the public site; students are not.
 
 ## Who and what
 - Open to **Grades 9, 10 and 11** as coachees; any number of subjects.
