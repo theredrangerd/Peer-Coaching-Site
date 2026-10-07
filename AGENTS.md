@@ -41,7 +41,9 @@ The site serves three jobs at once:
 **The Portal direction was chosen.** The site is now two static pages in
 `mockups/`: `index.html` (parent-first home) and `resources.html` (public,
 library-style revision resources). Work order: overhaul the portal, then the
-revision resources page. Still plain HTML/CSS/JS, no build step; the real
+revision resources page. **Status (2026-10-07): the portal (`index.html`) is
+basically done; the owner is waiting on a round of feedback from [EA].
+Only make small fixes to it until that feedback lands.** Still plain HTML/CSS/JS, no build step; the real
 (Phase 1) stack is undecided. The original three-mockup brief is in
 `docs/mockup-briefs.md` and git history.
 
