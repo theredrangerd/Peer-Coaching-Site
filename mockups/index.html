@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Peer Coaching Hub — UWCSEA</title>
 <meta name="description" content="Small sessions with Grade 11 UWCSEA students who are strong in your courses. Open to Grades 9 to 11.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Pinyon+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared/tokens.css">
 <link rel="stylesheet" href="shared/reset.css">
 <link rel="stylesheet" href="shared/a11y.css">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=5">
 <link rel="stylesheet" href="home.css">
 <script>
 document.documentElement.classList.add("js");
@@ -330,22 +333,22 @@ document.documentElement.classList.add("js");
       <div class="section-head">
         <h2 id="con-h">Contact us</h2>
         <p class="section-sub"><span class="pill pill--sample">Placeholder</span> The shared programme address is still to be confirmed.</p>
+        <p class="dev-note" role="note"><strong>Message to coordinators, not part of the site: by the way, we need to sort out legally whether we can put student email addresses on this site, and whose email addresses we can show.</strong></p>
       </div>
       <ul class="contact-grid" role="list">
         <li class="contact-card">
           <p class="contact-role">Programme email</p>
-          <p class="contact-detail">peercoaching@example.uwcsea.edu.sg</p>
+          <p class="contact-detail">programme@example.com</p>
           <p class="contact-note">Programme questions and sign-up help.</p>
         </li>
         <li class="contact-card">
           <p class="contact-role">Student coordinators</p>
-          <p class="contact-detail">Via the programme email</p>
-          <p class="contact-note">Run the programme and fix problems.</p>
+          <p class="contact-detail">coordinator1@example.com</p>
+          <p class="contact-detail">coordinator2@example.com</p>
         </li>
         <li class="contact-card">
           <p class="contact-role">Staff lead</p>
-          <p class="contact-detail">[EA], Head of Learning, and [DM], Coordinator of English in High School</p>
-          <p class="contact-note">Oversight.</p>
+          <p class="contact-detail">[EA], Head of Learning</p>
         </li>
       </ul>
 
@@ -355,19 +358,43 @@ document.documentElement.classList.add("js");
 </main>
 
 <footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div>
-      <a class="wordmark wordmark--foot" href="#top"><span class="mark" aria-hidden="true"></span> Peer Coaching Hub</a>
-      <p class="foot-note">Peer coaching at UWCSEA. Run by students. This site doesn&rsquo;t publish student names, photos or results.</p>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="foot-brand">
+        <a class="wordmark wordmark--foot" href="index.html#top"><span class="mark" aria-hidden="true"></span> Peer Coaching Hub</a>
+        <p class="foot-tagline">Small sessions with Grade 11 UWCSEA students who are strong in your course. Open to Grades 9 to 11. Also free, as tutoring should be.</p>
+        <a class="foot-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSf1Z1Iq5IEXSOcfdVRDhCTiiGeBbZqanfJGEhni4e6G5SWXrQ/viewform?usp=dialog" target="_blank" rel="noopener">Sign up for sessions</a>
+      </div>
+      <nav aria-labelledby="foot-explore">
+        <h2 class="foot-h" id="foot-explore">Explore</h2>
+        <ul role="list" class="foot-links">
+          <li><a href="#why">Why Peer Coaching</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#sessions">Sessions and subjects</a></li>
+          <li><a href="#coaches">Our coaches</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="resources.html">Revision resources</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="foot-involved">
+        <h2 class="foot-h" id="foot-involved">Get involved</h2>
+        <ul role="list" class="foot-links">
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1Z1Iq5IEXSOcfdVRDhCTiiGeBbZqanfJGEhni4e6G5SWXrQ/viewform?usp=dialog" target="_blank" rel="noopener">Sign up</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdO1knURxH_Y7hktqq55VOhucZ54KXzyFL63JLpLE9nKnRXXw/viewform" target="_blank" rel="noopener">Tell us how a session went</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdWF9qcGGwyZ7Q5Gqzubm27lK_oFiN86UlWAIq_QRwKf6ZrKw/viewform?usp=publish-editor" target="_blank" rel="noopener">Share an idea</a></li>
+          <li><a href="https://docs.google.com/presentation/d/1KqxIJSPlPA27UpcIySqv_jAeX1GntdFx/edit?usp=sharing&amp;ouid=116814784392305249790&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Coach profiles (school community)</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="foot-h" id="foot-contact">Contact</h2>
+        <p class="foot-contact">[EA]<br><span>Head of Learning</span></p>
+        <p class="foot-contact"><a href="#contacts">All contact details</a></p>
+      </div>
     </div>
-    <nav aria-label="Footer">
-      <ul role="list" class="foot-links">
-        <li><a href="#why">Why Peer Coaching</a></li>
-        <li><a href="#how">How a session works</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="resources.html">Revision resources</a></li>
-      </ul>
-    </nav>
+    <div class="foot-base">
+      <p>Peer coaching at UWCSEA. Run by students, supported by staff. This site doesn&rsquo;t publish student names, photos or results.</p>
+      <a class="foot-top" href="#top">Back to top</a>
+    </div>
   </div>
 </footer>
 
