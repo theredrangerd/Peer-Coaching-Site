@@ -12,11 +12,11 @@ three-mockup review round — Portal / Editorial / Library — is in git history
 
 | Page | What | Status |
 | --- | --- | --- |
-| `mockups/index.html` — Home | Parent-first: why families choose it, how it works, subjects, flexible scheduling, coaches (profiles on a separate internal site), trust, FAQ, contacts | built; overhauled 2026-10-04 |
+| `mockups/index.html` — Home | Parent-first: why families choose it, how it works, subjects, flexible scheduling, coaches (profiles in a school-Drive slideshow), trust, FAQ, contacts | built; overhauled 2026-10-04 |
 | `mockups/resources.html` — Revision resources | Library-style reference: past papers, video channels, learning with AI, best picks by subject, with a table filter | built; "best picks by subject" is an empty template to fill |
 
 **Privacy rule:** the public site carries no student or coach names, photos or
-achievements. Coach profiles go on a separate internal site. See `AGENTS.md`.
+achievements. Coach profiles live in a Google Slides slideshow in the school Drive. See `AGENTS.md`.
 
 Next: overhaul the revision resources page. Still open: Phase 1 stack and the
 build-blocking questions in `docs/open-questions.md`.

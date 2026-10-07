@@ -33,7 +33,7 @@ The site serves three jobs at once:
 | The repo owner | Peer coach + the person building this site; assisting the coordinators |
 | Peer Coaching coordinators | Student leaders who run the programme; the client |
 | [EA] (Head of Learning) | Staff approver — signs off on the design direction |
-| Peer coaches | Provide the revision resources; their bios/photos go only on the separate internal site, never the public one |
+| Peer coaches | Provide the revision resources; their bios/photos go only in the coach-profiles slideshow (school Google Drive), never the public site |
 | Students | Primary audience — sign up, browse resources, check schedules |
 
 ## Current phase — READ THIS BEFORE BUILDING
@@ -58,8 +58,9 @@ Only make small fixes to it until that feedback lands.** Still plain HTML/CSS/JS
   2026-10-04):** the site is publicly accessible and students are minors. It must
   contain no student or coach **names**, **photos**, **bios**, **grades or
   other achievements**, or quotes — placeholder/fake people included. Coach
-  profiles live on a separate internal site (Google Apps Script, school Google
-  Workspace); the public site links to it and explains why it is internal.
+  profiles live in a Google Slides slideshow inside the school's Google Drive
+  (replaced the planned Apps Script internal site); the public site links to it
+  and explains why it is restricted to the school community.
   Show availability by subject, never by person. Contact details: role titles or
   a shared programme email only. Singapore PDPA applies to any form data.
   Revision resources are intended to be public; sign-up/feedback are Google
