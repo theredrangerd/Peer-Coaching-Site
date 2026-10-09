@@ -14,3 +14,6 @@ dist/
 # Source docs from coordinators: contain student names, class codes and emails.
 # Must never be committed to this public repo (see AGENTS.md privacy rule).
 peer-coaching-resources/
+
+# Playwright MCP page snapshots capture rendered text (may include names)
+.playwright-mcp/

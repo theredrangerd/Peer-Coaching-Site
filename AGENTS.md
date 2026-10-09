@@ -64,6 +64,17 @@ Only make small fixes to it until that feedback lands.** Still plain HTML/CSS/JS
   a shared programme email only. Singapore PDPA applies to any form data.
   Revision resources are intended to be public; sign-up/feedback are Google
   Forms (restricted).
+  **Scope of the rule (extended 2026-10-09):** it covers *everything committed
+  to this repo*, not just the rendered site — `docs/`, code comments, commit
+  messages, branch names and screenshots included. Never write any real
+  student's (coordinator, coach or coachee) **name — first names too**,
+  **email**, **class/form code** (e.g. `11XXX`), photo, grade or quote anywhere
+  tracked. Staff are referred to by placeholder ([EA], [DM]) or role title, not
+  name. Emails in the repo must be obvious placeholders on `example.com`.
+  The only places real names/emails may exist are the gitignored
+  `peer-coaching-resources/` and the school's Drive. If a task seems to need
+  one, stop and use a role/placeholder instead. Before every commit, run
+  `git diff --cached` and check for names, emails and class codes.
 - **Audience and positioning:** the public home page is written for **parents**
   and prospective students. A core goal is making Peer Coaching read as a
   legitimate alternative to commercial tutoring. Never name a competitor.
